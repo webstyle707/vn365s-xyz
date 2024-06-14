@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>cach-danh-dau-duoi-mien-bac</title>
+  </head>
+  <body class="bg-[#EFEFEF]">
+    <div class="bg-[#FFFFFF] mx-auto max-w-[1465px] border px-[18px]">
+      <!-- side nav -->
+      <div
+        class="hideandshow h-screen w-[65%] md:w-[40%] lg:hidden fixed top-0 bg-gray-200 bg-opacity-95 z-20"
+      >
+        <div class="w-full h-full space-y-6">
+          <div class="absolute top-4 right-3 text-2xl text-gray-600">
+            <ion-icon onclick="hideSideNav()" name="close-outline"></ion-icon>
+          </div>
+          <div class="px-3 pt-8">
+            <img class="w-40" src="./Images/logo-d9bet-biz.png" alt="" />
+          </div>
+          <div
+            class="w-full h-full flex flex-col space-y-4 *:pb-2 *:border-b *:border-gray-400 *:pl-3 text-sm px-px *:hover:border-[#FF5200]"
+          >
+            <a href="./index.html"> TRANG CHỦ </a>
+            <a href="./dang-ky.html"> ĐĂNG KÝ </a>
+            <a href="./nap-tien.html"> NẠP TIỀN </a>
+            <a href="./rut-tien.html"> RÚT TIỀN </a>
+            <a href="./khuyen-mai.html"> KHUYẾN MÃI </a>
+            <a href="./thu-thuat-ca-cuoc.html"> THỦ THUẬT CÁ CƯỢC </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Header -->
+      <div>
+        <!-- header -->
+        <div class="w-full bg-[#161616] lg:block hidden">
+          <div class="flex justify-between items-center px-[20px] py-3">
+            <div>
+              <img class="h-[100px]" src="./Images/logo-d9bet-biz.png" alt="" />
+            </div>
+            <div class="flex items-center space-x-3 text-white">
+              <a href="https://www.hay88.one/?inviteCode=1751262">
+                <button
+                  class="bg-[#009FE3] hover:bg-[#007FB6] transition-all duration-200 font-bold py-[10px] px-6 rounded-full"
+                >
+                  ĐĂNG NHẬP
+                </button>
+              </a>
+              <a href="https://www.hay88.one/?inviteCode=1751262">
+                <button
+                  class="bg-[#FF5200] hover:bg-[#CC4200] transition-all duration-200 font-bold py-[10px] px-10 rounded-full"
+                >
+                  ĐĂNG KÝ
+                </button>
+              </a>
+            </div>
+          </div>
+          <div
+            class="flex items-center font-semibold text-white *:px-6 *:py-5 border-t border-[#FF5200]"
+          >
+            <a
+              class="transition-all duration-300 hover:bg-[#FF5200]"
+              href="./index.html"
+              >TRANG CHỦ</a
+            >
+            <a
+              class="transition-all duration-300 hover:bg-[#FF5200]"
+              href="./dang-ky.html"
+              >ĐĂNG KÝ</a
+            >
+            <a
+              class="transition-all duration-300 hover:bg-[#FF5200]"
+              href="./nap-tien.html"
+              >NẠP TIỀN</a
+            >
+            <a
+              class="transition-all duration-300 hover:bg-[#FF5200]"
+              href="./rut-tien.html"
+              >RÚT TIỀN</a
+            >
+            <a
+              class="transition-all duration-300 hover:bg-[#FF5200]"
+              href="./khuyen-mai.html"
+              >KHUYẾN MÃI</a
+            >
+            <a class="bg-[#FF5200]" href="./thu-thuat-ca-cuoc.html"
+              >THỦ THUẬT CÁ CƯỢC</a
+            >
+          </div>
+        </div>
+
+        <!-- sm header -->
+        <div class="w-full bg-[#161616] lg:hidden block">
+          <div class="flex justify-center items-center py-4">
+            <img src="./Images/logo-d9bet-biz.png" alt="" />
+          </div>
+          <div class="py-4 border-t border-[#FF5200]">
+            <div class="justify-between flex items-center px-2 md:px-5">
+              <div onclick="showSideNav()" class="text-3xl text-white">
+                <ion-icon name="menu-outline"></ion-icon>
+              </div>
+              <div class="flex items-center md:space-x-3 space-x-2 text-white">
+                <a href="https://www.hay88.one/?inviteCode=1751262">
+                  <button
+                    class="bg-[#009FE3] hover:bg-[#007FB6] transition-all duration-200 font-bold text-xs md:text-base pb-[6px] pt-[8px] px-4 md:px-6 rounded-full"
+                  >
+                    ĐĂNG NHẬP
+                  </button>
+                </a>
+                <a href="https://www.hay88.one/?inviteCode=1751262">
+                  <button
+                    class="bg-[#FF5200] hover:bg-[#CC4200] transition-all duration-200 font-bold text-xs md:text-base pb-[6px] pt-[8px] px-6 md:px-10 rounded-full"
+                  >
+                    ĐĂNG KÝ
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- container -->
+      <div
+        class="w-full lg:flex space-y-8 lg:space-y-0 lg:space-x-3 xl:space-x-8 py-8"
+      >
+        <div class="w-full lg:w-[68%] space-y-8">
+          <div class="space-y-8">
+            <div>
+              <p class="text-lg">
+                <span class="text-blue-400"
+                  ><a href="./index.html">Trang chủ</a></span
+                >
+                \
+                <span class="text-blue-400"
+                  ><a href="./thu-thuat-ca-cuoc.html"
+                    >Thủ Thuật Cá Cược</a
+                  ></span
+                >
+                \ Cách bắt kèo trong bóng đá tại nhà cái uy tín VN365s
+              </p>
+            </div>
+          </div>
+          <div class="w-full space-y-8 border border-gray-100 pb-10">
+            <!-- 1 -->
+            <div class="space-y-6">
+              <div class="">
+                <img
+                  class="w-full"
+                  src="/Images/cach-bat-keo-trong/1.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="space-y-6 px-4 pb-10">
+                <div class="space-y-4">
+                  <h1 class="text-3xl font-bold">
+                    Cách bắt kèo trong bóng đá tại nhà cái uy tín VN365s
+                  </h1>
+                  <p class="text-sm space-x-1 text-gray-400 font-semibold">
+                    <span><ion-icon name="pencil-outline"> </ion-icon></span>
+                    <span> VN365s XYZ </span>
+                    <span><ion-icon name="time-outline"></ion-icon></span>
+                    <span> 15 THÁNG SÁU 2022 </span>
+                    <span>
+                      <ion-icon name="folder-open-outline"> </ion-icon></span
+                    ><span> THỦ THUẬT CÁ CƯỢC</span>
+                  </p>
+                </div>
+
+                <p>
+                  Bóng đá là một môn thể thao vua và những trận đấu đỉnh cao
+                  thường sẽ khiến bạn không thể bỏ lỡ. Do đó mà những nhà cái
+                  như <span class=" font-bold text-blue-400"> VN365s </span> đã tiến hành phát triển cá cược bóng đá để cho bạn
+                  có những phút giây thăng hoa hơn khi theo dõi những trận đấu
+                  như vậy. Nếu như bạn là một tân binh trong lĩnh vực này thì
+                  hãy cùng xem thử <span class=" font-bold text-blue-400"> cách bắt kèo trong bóng đá </span> được giới thiệu
+                  trong bài viết sau đây nhé!
+                </p>
+
+                <!-- img2 -->
+                <div
+                  class="flex flex-col justify-center items-center p-1 md:p-2 lg:p-3 w-full lg:w-11/12 mx-auto border"
+                >
+                  <div class="w-full">
+                    <img
+                      class="w-full"
+                      src="./Images/cach-bat-keo-trong/2.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <p class="w-full text-center pt-2">
+                    Giới thiệu <span class=" font-bold"> cách bắt kèo trong bóng đá </span> hay nhất hiện nay.
+                  </p>
+                </div>
+                <div class="space-y-5">
+                  <h1 class="font-bold text-2xl">
+                    <span class=" font-bold"> Cách bắt kèo trong bóng đá </span> cho tân binh cá cược
+                  </h1>
+
+                  <p>
+                    Những <span class=" font-bold"> cách bắt kèo trong bóng đá </span> cần phải được thực hiện một
+                    cách có đầu tư và cẩn thận. Bởi lẽ, bạn có thể gặp phải tình
+                    trạng “ném tiền qua cửa sổ” nếu không có cho mình một cách
+                    bắt kèo đúng đắn và phù hợp. Sau đây là 4 cách bắt kèo trong
+                    bóng đá cơ bản nhất mà bạn có thể tham khảo:
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2 -->
+            <div class="space-y-8 px-4">
+              <div>
+                <h1 class="font-bold text-2xl">
+                  Cách bắt kèo trong bóng đá cho tân binh cá cược
+                </h1>
+                <p>
+                  Những <span class=" font-bold"> cách bắt kèo trong bóng đá </span> cần phải được thực hiện một
+                  cách có đầu tư và cẩn thận. Bởi lẽ, bạn có thể gặp phải tình
+                  trạng “ném tiền qua cửa sổ” nếu không có cho mình một cách bắt
+                  kèo đúng đắn và phù hợp. Sau đây là 4 cách bắt kèo trong bóng
+                  đá cơ bản nhất mà bạn có thể tham khảo:
+                </p>
+              </div>
+
+              <div class="space-y-5">
+                <h1 class="font-bold text-xl">
+                  Tìm các thông tin soi kèo bóng đá
+                </h1>
+                <p>
+                  Những thông tin về trận đấu sắp diễn ra chính là tư liệu chính
+                  giúp cho người chơi có được cái nhìn từ bao quát đến cụ thể
+                  nhất. Từ đó mà bạn mới đưa ra được nhận định chuẩn xác nhất về
+                  thế mạnh giữa 2 đội và cụ thể đâu là đội kèo trên. Những thông
+                  tin bạn có thể thu thập bao gồm:
+                </p>
+              </div>
+
+              <div>
+                <ul class="pl-6 list-disc py-1">
+                  <li>
+                    Thứ tự xếp hạng của 2 đội trên những trang xếp hạng uy tín
+                    thế giới.
+                  </li>
+                  <li>
+                    Lịch sử đối đầu: Đã từng gặp nhau bao nhiêu lần? Đội nào
+                    giành nhiều chiến thắng hơn?
+                  </li>
+                  <li>
+                    Hiện tại phong độ của hai đội như thế nào? Đội nào đang sở
+                    hữu cho mình các thế mạnh hơn?
+                  </li>
+                  <li>Đội nào đang có mật độ thi đấu nhiều và dày đặc hơn?</li>
+                  <li>
+                    Đội hình ra sân của hai đội gồm có những cầu thủ nào và
+                    chiến thuật chơi của hai đội có sự khác biệt ra sao?
+                  </li>
+
+                  <li>
+                    Những thông tin bên lề như lượt tương tác truyền thông, số
+                    lượng người hâm mộ, tình hình chính trị, tình hình thời
+                    tiết,…
+                  </li>
+                </ul>
+                <h1 class="font-bold text-2xl">Chọn lựa cửa cược</h1>
+                <p>
+                  Việc chọn cửa cược là một trong số những điều mà bạn cần lưu ý
+                  khi cá cược tại VN365s. Các thông tin về kèo đấu cũng như tỷ lệ
+                  cược mà nhà cái đưa ra sẽ giúp cho bạn nắm nhiều lợi thế trong
+                  quá trình soi kèo. Nếu bạn dành thời gian cập nhật bảng kèo và
+                  đọc vị được cách nhà cái soi kèo thì sẽ có nhiều phần trăm
+                  thắng lợi hơn cả:
+                </p>
+              </div>
+
+              <div class="space-y-5">
+                <ul class="pl-6 list-disc py-1">
+                  <li>
+                    Nếu như tỷ lệ chấp đang cao từ 1 mà giảm xuống 3/4 thì kèo
+                    dưới đang có nhiều ưu thế hơn cả. Do đó đừng ngại ngần chọn
+                    kèo dưới. Tuy nhiên, nếu tỷ lệ chấp giảm nhưng tỷ lệ ăn cũng
+                    giảm thì hãy chọn đội còn lại.
+                  </li>
+                  <li>
+                    Trong trường hợp đội kèo dưới là bên ghi bàn đầu tiên thì
+                    cược kèo dưới sẽ an toàn cho bạn hơn cả.
+                  </li>
+                  <li>
+                    Khi đội yếu thế là đội chủ nhà, đội mạnh chấp từ 1 đến 1/2
+                    trái thì bạn cần phải cân nhắc chọn kèo dưới.
+                  </li>
+                  <li>
+                    Nếu hai bên có trình độ và thể lực gần như là cân bằng thì
+                    hãy chọn đội khách và tiến hành cược kèo đồng banh.
+                  </li>
+                  <li>
+                    Nếu như kèo châu Á đang tăng lên 1/4 nhưng kèo châu Âu lại
+                    liên tục nghiêng về hòa thì hãy chọn ngay đội chủ nhà. Còn
+                    nếu kèo Châu Á giảm trong khi kèo châu Âu không biến động
+                    thì hãy chọn lựa đội khách.
+                  </li>
+
+                  <li>
+                    Trường hợp kèo châu Âu đang cân bằng với kèo chấp là 1/4 và
+                    kèo Châu Á là 1/2 thì người chơi hãy đặt niềm tin vào đội
+                    khách.
+                  </li>
+                </ul>
+
+                <div class="flex items-center space-x-5 text-lg">
+                  <p class="h-10 border-2 border-gray-300"></p>
+                  <p>
+                    <span class="font-bold"> =>> Xem thêm:</span>
+                    <span
+                      class="font-bold text-blue-400 cursor-pointer hover:text-blue-500 transition-all duration-200"
+                    >
+                      Đầu đuôi miền Bắc là gì và có những cách đánh đầu đuôi
+                      miền Bắc nào?</span
+                    >
+                  </p>
+                </div>
+
+                <h1 class="font-bold text-xl">Không đặt cược kèo dụ</h1>
+
+                <p>
+                  Kèo dụ là một cái bẫy mà những nhà cái kém uy tín đưa ra để dụ
+                  dỗ người chơi vào những kèo nguy hiểm và biến động thường
+                  xuyên. Nhà cái sẽ đưa ra mức cược khủng để người chơi lọt vào
+                  và đương nhiên việc chiến thắng là điều gần như không thể xảy
+                  ra.
+                </p>
+
+                <p>
+                  Do đó, đây là loại kèo đang được khuyến cáo là không nên đặt
+                  cược. Bạn hãy tránh xa kèo dụ nếu không muốn mất trắng tiền
+                  một cách vô nghĩa. Hãy để vốn của mình vào những loại kèo uy
+                  tín và phổ biến với chiến thuật chơi hợp lý nhé!
+                </p>
+              </div>
+            </div>
+
+            <!-- 3 -->
+            <div class="space-y-8 px-4">
+              <div class="space-y-5">
+                <!-- img2 -->
+                <div
+                  class="flex flex-col justify-center items-center p-1 md:p-2 lg:p-3 w-full lg:w-11/12 mx-auto border"
+                >
+                  <div class="w-full">
+                    <img
+                      class="w-full"
+                      src="./Images/cach-bat-keo-trong/3.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <p class="w-full text-center pt-2">
+                    Kèo dụ khiến cho nhiều người chơi mất tiền oan.
+                  </p>
+                </div>
+
+                <h1 class="text-xl font-bold">Ưu tiên kèo Châu Âu</h1>
+                <p>
+                  Kèo châu Âu hiện nay đang được người chơi cá cược áp dụng một
+                  cách phổ biến và phù hợp với những người mới chơi cá cược. Đặc
+                  biệt, kèo châu Âu còn vô cùng dễ chơi với 3 cửa cược và do đó
+                  mà cơ hội thắng cược cao, tới 33,3%. Bạn hãy cân nhắc kèo châu
+                  Âu trước khi chọn lựa loại kèo khác để đảm bảo vốn cược được
+                  duy trì.
+                </p>
+              </div>
+
+              <div class="space-y-5">
+                <h1 class="font-bold text-2xl">
+                  Những lưu ý khi chơi tại nhà cái VN365s
+                </h1>
+                <p>
+                  Nhà cái VN365s cho phép người chơi tham gia cá cược một cách
+                  minh bạch và an toàn. Nếu như bạn muốn giành được nhiều chiến
+                  thắng tại sân chơi này thì cũng cần tuân thủ những nguyên tắc
+                  sau đây. Đây chính là chiếc chìa khóa khiến cho bạn trở thành
+                  cao thủ khi chơi tại VN365s
+                </p>
+              </div>
+
+              <div class="space-y-5">
+                <h1 class="font-bold text-xl">
+                  Kiên trì tuân thủ các chiến thuật của bản thân
+                </h1>
+                <p>
+                  Cá độ bóng đá không phải lúc nào cũng sẽ khiến cho bạn đổi đời
+                  sau một đêm. Nếu như muốn cá cược an toàn, người chơi cần có
+                  sự kiên nhẫn và đầu tư thời gian thì mới có thể thu về nhiều
+                  lợi nhuận. Đặc biệt, những người chơi mới còn cần phải có kinh
+                  nghiệm và không ngừng trau dồi kỹ năng mới có thể chinh phục
+                  được số tiền thưởng đỉnh cao.
+                </p>
+              </div>
+
+              <p>
+                Vì lẽ đó, người chơi nào cũng cần phải lên cho mình một kế
+                hoạch, chiến thuật khi cá cược, kể cả là người chơi mới. Những
+                chiến thuật này là kim chỉ nam cho mọi ván cược của bạn và hãy
+                tuân thủ nghiêm khắc cho tới khi thành công.
+              </p>
+
+              <p>
+                Ví dụ, nếu như bạn đặt cược theo chiến thuật 1-2-3-4 nhưng vì
+                thua cược mà dừng lại ngay ở ván thứ 2 thì bạn sẽ không thể lấy
+                lại tiền được. Hãy đi đến ván thứ 3 và 4 để có thể thu được 10
+                lần vốn cược mà bạn đã bỏ ra từ lúc ban đầu.
+              </p>
+
+              <div class="space-y-5">
+                <h1 class="font-bold text-xl">
+                  Tỉnh táo và đề phòng tâm lý đám đông
+                </h1>
+                <p>
+                  Kể cả bạn có một kỹ năng và khả năng phán đoán tốt khi soi kèo
+                  mà không có tâm lý vững vàng thì vẫn có thể bị thua cược. Nếu
+                  như bạn bị ảnh hưởng bởi tâm lý đám đông và quyết định a dua
+                  theo những người khác thì bạn có thể sẽ mắc phải sai lầm khi
+                  cá cược.
+                </p>
+              </div>
+
+              <p>
+                Đừng bao giờ chạy theo đám đông, điều này có thể sẽ khiến cho
+                bạn phải hối hận. Thay vào đó, bạn phải tiến hành soi kèo thật
+                kỹ lưỡng và tin vào quyết định của bản thân mình. Việc nghe theo
+                lời khuyên của người khác chỉ xảy ra khi bạn thực sự không thể
+                phán đoán được thế trận mà thôi.
+              </p>
+
+              <div class="space-y-5">
+                <h1 class="font-bold text-xl">
+                  Rõ ràng trong chiến thuật soi kèo
+                </h1>
+                <p>
+                  Bạn cần phải lên kế hoạch và áp dụng chiến thuật một cách cụ
+                  thể và rõ ràng. Nếu như bạn làm theo chiến thuật của người
+                  khác mà không thực sự hiểu rõ thì đây chính là con dao hai
+                  lưỡi khiến cho bạn gặp nhiều thất bại. Hãy tìm ra chiến thuật
+                  phù hợp nhất với bản thân trước khi tiến hành bất kỳ cách bắt
+                  kèo trong bóng đá nào.
+                </p>
+              </div>
+
+              <div class="space-y-5">
+                <h1 class="font-bold text-xl">
+                  Hạn chế bản thân và ổn định tâm lý soi kèo
+                </h1>
+                <p>
+                  Nếu như bạn thực hiện đúng các <span class=" font-bold"> cách bắt kèo trong bóng đá </span>
+                  nhưng lại quá tham lam thì cũng có thể hại chính bản thân của
+                  mình. Do đó, hãy kiềm chế bản thân và đưa ra những mức cược
+                  hợp lý ở tất cả các ván đấu. Nếu như đã hết vốn thì nhất định
+                  không nên tiếp tục đặt cược. Đôi khi bạn sẽ có thể gặp phải
+                  thất bại trước khi có thể chinh phục được số tiền thưởng cao.
+                  Tuy nhiên, đừng nản chí mà hãy xem đó là bài học cho những ván
+                  cược tiếp theo.
+                </p>
+              </div>
+
+              <div class="space-y-5">
+                <!-- img2 -->
+                <div
+                  class="flex flex-col justify-center items-center p-1 md:p-2 lg:p-3 w-full lg:w-11/12 mx-auto border"
+                >
+                  <div class="w-full">
+                    <img
+                      class="w-full"
+                      src="./Images/cach-bat-keo-trong/4.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <p class="w-full text-center pt-2">
+                    Tâm lý là đòn bẩy giúp người chơi soi kèo thành công.
+                  </p>
+                </div>
+
+                <div class="flex items-center space-x-5 text-lg">
+                  <p class="h-10 border-2 border-gray-300"></p>
+                  <p>
+                    <span class="font-bold"> =>> Xem thêm:</span>
+                    <span
+                      class="font-bold text-blue-400 cursor-pointer hover:text-blue-500 transition-all duration-200"
+                    >
+                      Đầu đuôi miền Bắc là gì và có những cách đánh đầu đuôi
+                      miền Bắc nào?</span
+                    >
+                  </p>
+                </div>
+
+                <p>
+                  Vậy là bài viết trên đây của VN365s đã giúp cho bạn hiểu thêm
+                  về cá cược bóng đá và <span class=" font-bold"> cách bắt kèo trong bóng đá </span> mới nhất năm
+                  2022. Nếu bạn là một người vừa ưa thích bóng đá lại còn có đam
+                  mê cá cược thì đừng nên bỏ lỡ trò chơi này tại nhà cái VN365s
+                  nhé!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-full lg:w-[32%] space-y-5">
+          <div class="flex items-center w-full">
+            <div class="w-[40%] border-2 border-red-600"></div>
+            <div class="w-[60%] border-2 border-gray-200"></div>
+          </div>
+
+          <div>
+            <a
+              class="flex space-x-3 pr-1"
+              href="./cach-chia-bai-ba-cay-diem-cao.html"
+            >
+              <div class="w-[20%] md:w-[10%] lg:w-[20%] xl:w-[20%]">
+                <img
+                  class="w-full"
+                  src="./Images/iconCards/iconcard1.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="w-[80%] md:w-[70%] lg:w-[80%] xl:w-[80%] space-y-1">
+                <h1
+                  class="text-sm md:text-base lg:text-sm xl:text-base font-bold"
+                >
+                  Bật mí các cách chia bài ba cây điểm cao dành cho người chơi
+                  mới
+                </h1>
+                <div class="text-xs md:text-sm lg:text-xs xl:text-sm">
+                  <span> <ion-icon name="time-outline"></ion-icon> </span>
+                  <span> 10:14:SÁNG </span>
+                  <span class="pl-1">
+                    <ion-icon name="calendar-outline"></ion-icon>
+                  </span>
+                  <span> 17 THÁNG SÁU 2022 </span>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div>
+            <a
+              class="flex space-x-3 pr-1"
+              href="./cach-danh-dau-duoi-mien-bac.html"
+            >
+              <div class="w-[20%] md:w-[10%] lg:w-[20%] xl:w-[20%]">
+                <img
+                  class="w-full"
+                  src="./Images/iconCards/iconcard2.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="w-[80%] md:w-[70%] lg:w-[80%] xl:w-[80%] space-y-1">
+                <h1
+                  class="text-sm md:text-base lg:text-sm xl:text-base font-bold"
+                >
+                  Đầu đuôi miền Bắc là gì và có những cách đánh đầu đuôi miền
+                  Bắc nào?
+                </h1>
+                <div class="text-xs md:text-sm lg:text-xs xl:text-sm">
+                  <span> <ion-icon name="time-outline"></ion-icon> </span>
+                  <span> 10:43:CHIỀU </span>
+                  <span class="pl-1">
+                    <ion-icon name="calendar-outline"></ion-icon>
+                  </span>
+                  <span> 15 THÁNG SÁU 2022 </span>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div>
+            <a
+              class="flex space-x-3 pr-1"
+              href="./nhung-luu-y-khi-choi-bai-mau-binh-can-ghi-nho.html"
+            >
+              <div class="w-[20%] md:w-[10%] lg:w-[20%] xl:w-[20%]">
+                <img
+                  class="w-full"
+                  src="./Images/iconCards/iconcard3.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="space-y-1 w-[80%] md:w-[70%] lg:w-[80%] xl:w-[80%]">
+                <h1
+                  class="text-sm md:text-base lg:text-sm xl:text-base font-bold"
+                >
+                  Những lưu ý khi chơi bài mậu binh cần ghi nhớ
+                </h1>
+                <div class="text-xs md:text-sm lg:text-xs xl:text-sm">
+                  <span> <ion-icon name="time-outline"></ion-icon> </span>
+                  <span> 10:38:CHIỀU </span>
+                  <span class="pl-1">
+                    <ion-icon name="calendar-outline"></ion-icon>
+                  </span>
+                  <span> 15 THÁNG SÁU 2022 </span>
+                </div>
+              </div></a
+            >
+          </div>
+
+          <div>
+            <a
+              class="flex space-x-3 pr-1"
+              href="./cach-bat-keo-trong-bong-da.html"
+            >
+              <div class="w-[20%] md:w-[10%] lg:w-[20%] xl:w-[20%]">
+                <img
+                  class="w-full"
+                  src="./Images/iconCards/iconcard4.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="space-y-1 w-[80%] md:w-[70%] lg:w-[80%] xl:w-[80%]">
+                <h1
+                  class="text-sm md:text-base lg:text-sm xl:text-base font-bold"
+                >
+                  Cách bắt kèo trong bóng đá tại nhà cái uy tín VN365s
+                </h1>
+                <div class="text-xs md:text-sm lg:text-xs xl:text-sm">
+                  <span> <ion-icon name="time-outline"></ion-icon> </span>
+                  <span> 10:33:CHIỀU </span>
+                  <span class="pl-1">
+                    <ion-icon name="calendar-outline"></ion-icon>
+                  </span>
+                  <span> 15 THÁNG SÁU 2022 </span>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- <div class="flex space-x-3 pr-1">
+            <div>
+              <img
+                class="w-[130px] md:w-[70px] lg:w-52 xl:w-32"
+                src="./Images/iconCards/iconcard5.jpg"
+                alt=""
+              />
+            </div>
+            <div class="space-y-1">
+              <h1
+                class="text-sm md:text-base lg:text-sm xl:text-base font-bold"
+              >
+                Bật mí các cách chia bài ba cây điểm cao dành cho người chơi mới
+              </h1>
+              <div class="text-xs md:text-sm lg:text-xs xl:text-sm">
+                <span> <ion-icon name="time-outline"></ion-icon> </span>
+                <span> 10:14:SÁNG </span>
+                <span>
+                  <ion-icon name="calendar-outline"></ion-icon>
+                </span>
+                <span> 17 THÁNG SÁU 2022 </span>
+              </div>
+            </div>
+          </div> -->
+
+          <!-- <div class="flex space-x-3 pr-1">
+            <div>
+              <img
+                class="w-[130px] md:w-[70px] lg:w-52 xl:w-32"
+                src="./Images/iconCards/iconcard6.jpg"
+                alt=""
+              />
+            </div>
+            <div class="space-y-1">
+              <h1
+                class="text-sm md:text-base lg:text-sm xl:text-base font-bold"
+              >
+                Bật mí các cách chia bài ba cây điểm cao dành cho người chơi mới
+              </h1>
+              <div class="text-xs md:text-sm lg:text-xs xl:text-sm">
+                <span> <ion-icon name="time-outline"></ion-icon> </span>
+                <span> 10:14:SÁNG </span>
+                <span>
+                  <ion-icon name="calendar-outline"></ion-icon>
+                </span>
+                <span> 17 THÁNG SÁU 2022 </span>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+
+      <!-- footer -->
+      <div
+        class="grid md:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-8 lg:gap-10 bg-[#191919] px-6 py-20 font-semibold"
+      >
+        <div class="flex justify-center items-center lg:items-start">
+          <img
+            class="h-[70px] lg:h-14 xl:h-20"
+            src="./Images/logo-d9bet-biz.png"
+            alt=""
+          />
+        </div>
+        <div class="lg:space-y-5 space-y-3">
+          <div class="border-b border-gray-200 text-white pb-2">
+            <h1 class="font-bold text-lg lg:text-xl 2xl:text-2xl">CÁ CƯỢC</h1>
+          </div>
+          <div
+            class="lg:text-base text-sm text-gray-400 space-y-1 lg:space-y-2 xl:space-y-3"
+          >
+            <p>Thể Thao</p>
+            <p>Đá Gà</p>
+            <p>Casino Trực Tuyến</p>
+          </div>
+        </div>
+        <div class="lg:space-y-5 space-y-3">
+          <div class="border-b border-gray-200 text-white pb-2">
+            <h1 class="font-bold text-lg lg:text-xl 2xl:text-2xl">HƯỚNG DẪN</h1>
+          </div>
+          <div
+            class="lg:text-base text-sm text-gray-400 space-y-1 lg:space-y-2 xl:space-y-3"
+          >
+            <p class="hover:text-white transition-all duration-100">
+              <a href="./dang-ky.html">Đăng Ký VN365s</a>
+            </p>
+            <p class="hover:text-white transition-all duration-100">
+              <a href="./nap-tien.html">Nạp Tiền VN365s</a>
+            </p>
+            <p class="hover:text-white transition-all duration-100">
+              <a href="./rut-tien.html">Rút Tiền VN365s</a>
+            </p>
+            <p class="hover:text-white transition-all duration-100">
+              <a href="./khuyen-mai.html">Khuyến Mãi VN365s</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="space-y-3 xl:space-y-5 text-white">
+          <div class="border-b border-gray-200 text-white pb-2">
+            <h1 class="font-bold text-lg lg:text-xl 2xl:text-2xl">LIÊN HỆ</h1>
+          </div>
+          <p class="lg:text-base text-sm">
+            32t8 Âu Dương Lân, Phường 3, Quận 8, Thành phố Hồ Chí Minh
+          </p>
+          <p class="lg:text-base text-sm">0969581241</p>
+
+          <p>https://vn365s.xyz/</p>
+        </div>
+      </div>
+      <div
+        class="bg-[#0D0F26] px-6 py-8 space-y-2 md:space-y-0 md:flex justify-between items-center text-gray-200"
+      >
+        <p class="lg:text-base text-sm text-center">© Copyright by vn365s.xyz</p>
+        <div class="flex justify-center items-center">
+          <div class="flex items-center space-x-2 md:space-x-4">
+            <p class="lg:text-base text-xs md:text-sm">
+              Giới Thiệu | Chính Sách Bảo Mật | Liên Hệ
+            </p>
+            <ion-icon
+              name="chevron-up-outline"
+              class="text-2xl lg:text-3xl"
+            ></ion-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

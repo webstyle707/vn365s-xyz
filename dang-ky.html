@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Hướng dẫn đăng ký VN365s với các bước cực kỳ đơn giản</title>
+  </head>
+  <body class="bg-[#EFEFEF]">
+    <div class="bg-[#FFFFFF] mx-auto max-w-[1465px] border px-[18px]">
+
+       <!-- side nav -->
+       <div class="hideandshow h-screen w-[65%] md:w-[40%] lg:hidden fixed  top-0 bg-gray-200 bg-opacity-95 z-20 ">
+
+        <div class="w-full h-full space-y-6">
+         <div class=" absolute top-4 right-3 text-2xl text-gray-600">
+           <ion-icon onclick="hideSideNav()" name="close-outline"></ion-icon>
+         </div>
+         <div class=" px-3 pt-8">
+           <img class="w-40" src="./Images/logo-d9bet-biz.png" alt="">
+         </div>
+         <div
+         class="w-full h-full flex flex-col space-y-4 *:pb-2 *:border-b *:border-gray-400 *:pl-3 text-sm px-px *:hover:border-[#FF5200]"
+       >
+         <a href="./index.html"> TRANG CHỦ </a>
+         <a href="./dang-ky.html"> ĐĂNG KÝ </a>
+         <a href="./nap-tien.html"> NẠP TIỀN </a>
+         <a href="./rut-tien.html"> RÚT TIỀN </a>
+         <a href="./khuyen-mai.html"> KHUYẾN MÃI </a>
+         <a href="./thu-thuat-ca-cuoc.html"> THỦ THUẬT CÁ CƯỢC </a>
+       </div>
+        </div>
+       </div>
+
+       
+      <!-- Header -->
+      <div>
+        <!-- header -->
+        <div class="w-full bg-[#161616] lg:block hidden">
+          <div class="flex justify-between items-center px-[20px] py-3">
+            <div>
+              <img class="h-[100px]" src="./Images/logo-d9bet-biz.png" alt="" />
+            </div>
+            <div class="flex items-center space-x-3 text-white">
+              <a href="https://www.hay88.one/?inviteCode=1751262">
+                <button
+                  class="bg-[#009FE3] hover:bg-[#007FB6] transition-all duration-200 font-bold py-[10px] px-6 rounded-full"
+                >
+                  ĐĂNG NHẬP
+                </button>
+              </a>
+              <a href="https://www.hay88.one/?inviteCode=1751262">
+                <button
+                  class="bg-[#FF5200] hover:bg-[#CC4200] transition-all duration-200 font-bold py-[10px] px-10 rounded-full"
+                >
+                  ĐĂNG KÝ
+                </button>
+              </a>
+            </div>
+          </div>
+          <div
+            class="flex items-center font-semibold text-white *:px-6 *:py-5 border-t border-[#FF5200]"
+          >
+            <a class=" transition-all duration-300 hover:bg-[#FF5200]" href="./index.html">TRANG CHỦ</a>
+            <a
+              class="bg-[#FF5200]"
+              href="./dang-ky.html"
+              >ĐĂNG KÝ</a
+            >
+            <a
+              class="transition-all duration-300 hover:bg-[#FF5200]"
+              href="./nap-tien.html"
+              >NẠP TIỀN</a
+            >
+            <a
+              class="transition-all duration-300 hover:bg-[#FF5200]"
+              href="./rut-tien.html"
+              >RÚT TIỀN</a
+            >
+            <a
+              class="transition-all duration-300 hover:bg-[#FF5200]"
+              href="./khuyen-mai.html"
+              >KHUYẾN MÃI</a
+            >
+            <a
+              class="transition-all duration-300 hover:bg-[#FF5200]"
+              href="./thu-thuat-ca-cuoc.html"
+              >THỦ THUẬT CÁ CƯỢC</a
+            >
+          </div>
+        </div>
+
+        <!-- sm header -->
+        <div class="w-full bg-[#161616] lg:hidden block">
+          <div class="flex justify-center items-center py-4">
+            <img src="./Images/logo-d9bet-biz.png" alt="" />
+          </div>
+          <div class="py-4 border-t border-[#FF5200]">
+            <div class="justify-between flex items-center px-2 md:px-5">
+              <div onclick="showSideNav()" class="text-3xl text-white">
+                <ion-icon name="menu-outline"></ion-icon>
+              </div>
+              <div class="flex items-center md:space-x-3 space-x-2 text-white">
+                <a href="https://www.hay88.one/?inviteCode=1751262">
+                  <button
+                    class="bg-[#009FE3] hover:bg-[#007FB6] transition-all duration-200 font-bold text-xs md:text-base pb-[6px] pt-[8px] px-4 md:px-6 rounded-full"
+                  >
+                    ĐĂNG NHẬP
+                  </button>
+                </a>
+                <a href="https://www.hay88.one/?inviteCode=1751262">
+                  <button
+                    class="bg-[#FF5200] hover:bg-[#CC4200] transition-all duration-200 font-bold text-xs md:text-base pb-[6px] pt-[8px] px-6 md:px-10 rounded-full"
+                  >
+                    ĐĂNG KÝ
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- container -->
+      <div
+        class="w-full lg:flex space-y-8 lg:space-y-0 lg:space-x-3 xl:space-x-8 py-8"
+      >
+        <div class="w-full lg:w-[68%] space-y-8">
+          <div class="space-y-8">
+            <div>
+              <p class="text-lg">
+                <span class="text-blue-400"
+                  ><a href="./index.html">Trang chủ</a></span
+                >
+                \ Đăng Ký
+              </p>
+            </div>
+            <h1 class="text-3xl font-bold">ĐĂNG KÝ</h1>
+          </div>
+          <div class="w-full space-y-8 border p-5">
+            <!-- 1 -->
+            <div class="space-y-8">
+              <p>
+                Nhà cái <span class="text-[#438BCA] font-bold"> VN365s </span> từ lâu đã nhận được vô vàn những lời khen ngợi từ
+                cộng đồng người chơi cũng như các chuyên gia trong làng cá cược
+                đổi thưởng. VN365s là nơi hội tụ đầy đủ những ưu điểm, họ có đủ
+                tố chất để trở thành một địa chỉ hàng đầu Châu Á. Vậy thì anh em
+                còn chờ gì nữa khi chưa có ngay cho mình một tài khoản cá nhân
+                tại địa chỉ này. Hãy cùng với chúng tôi tìm hiểu chi tiết cách
+                <span class=" font-bold text-[#438BCA]">đăng ký VN365s</span> ngay trong bài viết này nhé.
+              </p>
+
+              <!-- img1 -->
+              <div
+                class="flex flex-col justify-center items-center p-1 md:p-2 lg:p-3 w-full lg:w-11/12 mx-auto border"
+              >
+                <div class="w-full">
+                  <img
+                    class="w-full"
+                    src="./Images/Dang-ky/1.jpg"
+                    alt=""
+                  />
+                </div>
+                <p class="w-full text-center pt-2">Hướng dẫn đăng ký VN365s</p>
+              </div>
+            </div>
+
+            <!-- 2 -->
+            <div class="space-y-8">
+              <div class="space-y-5">
+                <h1 class="text-2xl font-bold">Tại sao nên <span class=" font-bold">đăng ký VN365s</span>?</h1>
+                <p>
+                  Có không ít bạn đọc ở đây vẫn còn đang thắc mắc về lý do tại
+                  sao chúng ta nên có một tài khoản cá nhân tại nhà cái VN365s.
+                  Ngay sau đây hãy dành ra một chút ít thời gian để theo dõi
+                  những ưu điểm cực kỳ nổi bật của địa chỉ này nhé!
+                </p>
+              </div>
+
+              <div class="space-y-5">
+                <h1 class="text-xl font-bold">Giao diện hình ảnh</h1>
+                <p>
+                  VN365s sở hữu giao diện hiện đại, đơn giản không hề cầu kỳ
+                  nhưng vẫn tạo ra được sự khác biệt của riêng mình. Toàn bộ các
+                  yếu tố từ giao diện đến âm thanh tất cả đều cho thấy sự đầu tư
+                  vô cùng mạnh tay của địa chỉ này. Đặc biệt cách chơi, cách
+                  tiếp cận với các sản phẩm của nhà cái VN365s cực kỳ đơn giản.
+                  Nhà cái luôn hỗ trợ luật chơi chi tiết ngay tại giao diện
+                  chính của mỗi sản phẩm để người chơi có thể tham khảo ngay và
+                  luôn.
+                </p>
+              </div>
+              <div class="space-y-5">
+                <h1 class="text-xl font-bold">Chất lượng sản phẩm</h1>
+                <p>
+                  VN365s cung cấp đến tay khách hàng một kho game cực khủng lên
+                  đến hàng trăm thể loại trò chơi khác nhau để thỏa mãn niềm đam
+                  mê cá cược của tất cả người chơi. Ngoài ra nhà cái còn thường
+                  xuyên nâng cấp các dịch cũng như tích cực cập nhật các dạng
+                  trò chơi mới để đem lại trải nghiệm tốt nhất cho người dùng.
+                  Tỷ lệ trả thưởng ấn tượng là một trong những yếu tố đã xây
+                  dựng lên thương hiệu nhà cái VN365s như hiện nay. So với các
+                  địa chỉ khác, tại VN365s là một mức thưởng hoàn toàn khác cho
+                  anh em cược thủ.
+                </p>
+              </div>
+
+              <div class="space-y-5">
+                <!-- img2 -->
+                <div
+                  class="flex flex-col justify-center items-center p-1 md:p-2 lg:p-3 w-full lg:w-11/12 mx-auto border"
+                >
+                  <div class="w-full">
+                    <img
+                      class="w-full"
+                      src="./Images/Dang-ky/2.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <p class="w-full text-center pt-2">
+                    VN365s chất lượng tuyệt đối
+                  </p>
+                </div>
+                <div class="space-y-5">
+                  <h1 class="text-xl font-bold">Nhiều ưu đãi hấp dẫn</h1>
+                  <p>
+                    Chắc hẳn phần lớn người chơi tại vn365s đều mong muốn được sở
+                    hữu các phần thưởng từ phía nhà cái. vn365s hiểu được tâm lý
+                    người dùng nên thường xuyên đưa ra các chương trình ưu đãi
+                    chất lượng. Đặc biệt ngay từ lần đầu <span class=" font-bold">đăng ký VN365s</span>, anh em
+                    đã được nhận vô số các phần thưởng liên quan tới chương
+                    trình thành viên mới. Số lượng khuyến mãi cũng cập nhật liên
+                    tục và có sự đổi mới để người chơi có thêm niềm cảm hứng khi
+                    chơi game.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 3 -->
+
+            <div class="space-y-8">
+              <!-- h1+p -->
+              <div class="space-y-5">
+                <h1 class="text-xl font-bold">Giao dịch tiện lợi số 1</h1>
+                <p>
+                  VN365s tối ưu hóa tất cả các khâu gia dịch cho người chơi.
+                  Những giao dịch được thực hiện với độ bảo mật cao, an toàn và
+                  cực kỳ tiện lợi. <span class=" font-bold">Đăng ký VN365s</span> hay giao dịch nạp rút tiền đảm
+                  bảo không phải mất thêm bất kỳ một khoản chi phí nào. Hệ thống
+                  cũng có trách nhiệm hỗ trợ và hướng dẫn người chơi nạp rút
+                  chính xác. Các kênh nạp rút tiền đa dạng và được thực hiện
+                  trong khoảng thời gian đúng như quy định.
+                </p>
+              </div>
+              <!-- h1+p -->
+              <div class="space-y-5">
+                <h1 class="text-xl font-bold">Dịch vụ hỗ trợ tận tâm</h1>
+                <p>
+                  Đội ngũ chăm sóc khách hàng tại nhà cái VN365s được xây dựng có
+                  quy mô. Tất cả các thắc mắc của người chơi từ khâu đăng ký
+                  VN365s cho đến các hoạt động khác đều được giải đáp tận tình.
+                  Bạn có thể thực hiện liên hệ với nhà cái qua nhiều cổng thông
+                  tin khác nhau, để lại yêu cầu và đánh giá để bộ phận hỗ trợ có
+                  tiêu chí sửa đổi
+                </p>
+              </div>
+              <!-- h1+p -->
+              <div class="space-y-5">
+                <h1 class="text-xl font-bold">Chế độ bảo mật uy tín</h1>
+                <p>
+                  <span class=" font-bold">Đăng ký VN365s</span> không chỉ yên tâm về chất lượng các sản phẩm mà
+                  còn có thể yên tâm ở cả những chế độ bảo mật dữ liệu. Một sân
+                  chơi an toàn, lành mạnh và tôn trọng quyền riêng tư của khách
+                  hàng. Tham gia vào VN365s, người chơi được phổ biến qua tất cả
+                  các điều khoản và điều kiện của nhà cái. Hệ thống bảo mật được
+                  kiểm định bởi các tổ chức uy tín hàng đầu như iTech Labs hay
+                  GoDaddy.
+                </p>
+              </div>
+
+              <!-- h1+p -->
+              <div class="space-y-5">
+                <h1 class="text-2xl font-bold">Hướng dẫn <span class=" font-bold">đăng ký VN365s</span></h1>
+                <p>
+                  Khâu <span class=" font-bold">đăng ký VN365s</span> có thể được thực hiện chỉ với 3 bước cực kỳ
+                  đơn giản. Người chơi trong quá trình <span class=" font-bold">đăng ký VN365s</span> sẽ được
+                  nhận thưởng ngay trong lần nạp tiền đầu tiên tại nhà cái. Dưới
+                  đây là 3 bước cụ thể sẽ giúp người chơi có ngay một tài khoản
+                  cá nhân tại địa chỉ này.
+                </p>
+              </div>
+
+              <div class="space-y-5">
+                <ul class="pl-8 space-y-1 list-disc">
+                  <li>
+                    Bước 1: Truy cập vào nhà cái VN365s tại đây. Người chơi sẽ
+                    được chuyển hướng đến trang chủ của nhà cái và chọn vào mục
+                    “đăng ký”.
+                  </li>
+                  <li>
+                    Bước 2: Các thông tin được để trống cần phải hoàn thiện một
+                    cách đầy đủ bao gồm tên người dùng, mật khẩu, xác nhận mật
+                    khẩu, email và số điện thoại.Bước 2: Các thông tin được để
+                    trống cần phải hoàn thiện một cách đầy đủ bao gồm tên người
+                    dùng, mật khẩu, xác nhận mật khẩu, email và số điện thoại.
+                  </li>
+                  <li>
+                    Bước 3: Người chơi tích vào phần ô trống ở bên dưới để khẳng
+                    định bạn chấp nhận các điều khoản cùng điều kiện mà nhà cái
+                    VN365s đặt ra. Bấm vào mục “gửi” để nhà cái VN365s xác lập
+                    thông tin và lập tài khoản cho bạn.
+                  </li>
+                </ul>
+                <!-- img3 -->
+                <div
+                  class="flex flex-col justify-center items-center p-1 md:p-2 lg:p-3 w-full lg:w-11/12 mx-auto border"
+                >
+                  <div class="w-full">
+                    <img
+                      class="w-full"
+                      src="./Images/Dang-ky/3.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <p class="w-full text-center pt-2">
+                    VN365s là địa chỉ hợp pháp
+                  </p>
+                </div>
+                <!-- h1+p -->
+                <div class="space-y-5">
+                  <h1 class="text-2xl font-bold">
+                    Những lưu ý quan trọng khi <span class=" font-bold">đăng ký VN365s</span>
+                  </h1>
+                  <p>
+                    <span class=" font-bold">Đăng ký VN365s</span> thành công cực kỳ đơn giản theo 3 bước mà
+                    chúng tôi đã cung cấp phía trên cho anh em cược thủ. Người
+                    chơi đồng thời quan tâm tới một vài những lưu ý dưới đây để
+                    quá trình đăng ký diễn ra mượt mà nhất.
+                  </p>
+                </div>
+              </div>
+
+              <div class="space-y-5">
+                <h1 class="text-xl font-bold">Đăng ký đúng nơi đúng chỗ</h1>
+                <p>
+                  Hiện tại chúng tôi là nơi cung cấp chính xác nhất link đăng ký
+                  VN365s. Người chơi tuyệt đối không sử dụng các link đăng ký
+                  không rõ nguồn gốc vì thị trường cá cược trực tuyến hiện tại
+                  đang có rất nhiều kẻ gian. Nếu bạn đăng ký ở những đường link
+                  như vậy rất có thể vấp phải hiện tượng lừa đảo. Nhẹ thì người
+                  chơi có thể mất một vài thông tin cá nhân, nặng hơn có thể là
+                  trường hợp hack tài khoản mạng xã hội, nhận tin nhắn rác, tin
+                  nhắn đe dọa,… Hãy thật tỉnh táo trong quá trình <span class=" font-bold">đăng ký VN365s</span>
+                  nhé!
+                </p>
+              </div>
+            </div>
+
+            <!-- 4 -->
+            <div class="space-y-8">
+              <!-- h1+p -->
+              <div class="space-y-5">
+                <h1 class="text-2xl font-bold">
+                  Hoàn thành thông tin theo mẫu quy định
+                </h1>
+                <p>
+                  Các thông tin <span class=" font-bold">đăng ký VN365s</span> cần được hoàn thành theo đúng biểu
+                  mẫu quy định. Giả sử với tên người dùng cần tối thiểu bao
+                  nhiêu ký tự, mật khẩu có chữ viết hoa,… Hãy chắc chắn các vấn
+                  đề này được thực hiện theo quy định của nhà cái. Nếu người
+                  chơi cố tình sử dụng các thông tin không đúng như biểu mẫu quy
+                  định thì quá trình đăng ký sẽ không thể được hoàn thành.
+                </p>
+              </div>
+
+              <p>
+                Sau khi hoàn thành các thông tin theo mẫu, hãy truy cập vào phần
+                hồ sơ cá nhân để hoàn tất các thông tin còn thiếu khác. Trong
+                quá trình đăng ký, VN365s không yêu cầu bạn phải cung cấp quá
+                nhiều thông tin cá nhân để phòng trừ trường hợp có kẻ gian xâm
+                hại. Tuy nhiên sau khi đã lập tài khoản thành công thì thông tin
+                của bạn cần phải rõ ràng và chi tiết hơn. Đơn cử có thể kể tới
+                họ tên, địa chỉ, số điện thoại dự phòng, email dự phòng, số tài
+                khoản ngân hàng, chủ tài khoản,… Những thông tin này phải có độ
+                chính xác ở mức cao nhất vì nó ảnh hưởng trực tiếp đến quá trình
+                thanh toán của người chơi khi trải nghiệm tại nhà cái
+              </p>
+
+              <div class="flex items-center space-x-5 text-lg">
+                <p class="h-10 border-2 border-gray-300"></p>
+                <p>
+                  <span class="font-bold"> >>> Xem thêm:</span>
+                  <span
+                    class="font-bold text-blue-400 cursor-pointer hover:text-blue-500 transition-all duration-200"
+                  >
+                    Hướng dẫn tham gia khuyến mãi thành viên mới VN365s</span
+                  >
+                </p>
+              </div>
+
+              <!-- h1+p -->
+              <div class="space-y-5">
+                <h1 class="text-xl font-bold">Nạp tiền để nhận thưởng</h1>
+                <p>
+                  Người chơi lần đầu <span class=" font-bold">đăng ký VN365s</span> sẽ được nhận thưởng từ phía
+                  nhà cái nhờ vào chương trình thành viên mới. Lưu ý với tất cả
+                  các chương trình thành viên mới bạn đều phải nạp tiền mới được
+                  nhận thưởng. Chi tiết mức thưởng còn tùy thuộc vào chương
+                  trình mà người chơi muốn tham dự. Với các chương trình ưu đãi
+                  cùng tính chất thì người chơi sẽ chỉ được tham gia 1 lần và
+                  phải đăng ký với bộ phận hỗ trợ. Tiền thưởng sẽ được cộng
+                  thẳng vào tài khoản cá nhân tại nhà cái và người chơi muốn rút
+                  sẽ phải trải qua một số lượng vòng cược theo quy định.
+                </p>
+              </div>
+              <p>
+                Trên đây là toàn bộ những thông tin quan trọng sẽ phục vụ cho
+                người chơi trong quá trình <span class=" font-bold">đăng ký VN365s</span>. <span class=" font-bold">Đăng ký VN365s</span> thực sự
+                không mất quá nhiều thời gian nên người chơi đừng ngần ngại mà
+                thực hiện luôn nhé. Đảm bảo quá trình trải nghiệm cá cược, tham
+                gia vào các sản phẩm cược sẽ không khiến bạn cảm thấy thất vọng.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-full lg:w-[32%] space-y-5">
+          <div class="flex items-center w-full">
+            <div class="w-[40%] border-2 border-red-600"></div>
+            <div class="w-[60%] border-2 border-gray-200"></div>
+          </div>
+
+          <div>
+            <a
+              class="flex space-x-3 pr-1"
+              href="./cach-chia-bai-ba-cay-diem-cao.html"
+            >
+              <div class="w-[20%] md:w-[10%] lg:w-[20%] xl:w-[20%]">
+                <img
+                  class="w-full"
+                  src="./Images/iconCards/iconcard1.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="w-[80%] md:w-[70%] lg:w-[80%] xl:w-[80%] space-y-1">
+                <h1
+                  class="text-sm md:text-base lg:text-sm xl:text-base font-bold"
+                >
+                  Bật mí các cách chia bài ba cây điểm cao dành cho người chơi
+                  mới
+                </h1>
+                <div class="text-xs md:text-sm lg:text-xs xl:text-sm">
+                  <span> <ion-icon name="time-outline"></ion-icon> </span>
+                  <span> 10:14:SÁNG </span>
+                  <span class="pl-1">
+                    <ion-icon name="calendar-outline"></ion-icon>
+                  </span>
+                  <span> 17 THÁNG SÁU 2022 </span>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div>
+            <a
+              class="flex space-x-3 pr-1"
+              href="./cach-danh-dau-duoi-mien-bac.html"
+            >
+              <div class="w-[20%] md:w-[10%] lg:w-[20%] xl:w-[20%]">
+                <img
+                  class="w-full"
+                  src="./Images/iconCards/iconcard2.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="w-[80%] md:w-[70%] lg:w-[80%] xl:w-[80%] space-y-1">
+                <h1
+                  class="text-sm md:text-base lg:text-sm xl:text-base font-bold"
+                >
+                  Đầu đuôi miền Bắc là gì và có những cách đánh đầu đuôi miền
+                  Bắc nào?
+                </h1>
+                <div class="text-xs md:text-sm lg:text-xs xl:text-sm">
+                  <span> <ion-icon name="time-outline"></ion-icon> </span>
+                  <span> 10:43:CHIỀU </span>
+                  <span class="pl-1">
+                    <ion-icon name="calendar-outline"></ion-icon>
+                  </span>
+                  <span> 15 THÁNG SÁU 2022 </span>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div>
+            <a
+              class="flex space-x-3 pr-1"
+              href="./nhung-luu-y-khi-choi-bai-mau-binh-can-ghi-nho.html"
+            >
+              <div class="w-[20%] md:w-[10%] lg:w-[20%] xl:w-[20%]">
+                <img
+                  class="w-full"
+                  src="./Images/iconCards/iconcard3.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="space-y-1 w-[80%] md:w-[70%] lg:w-[80%] xl:w-[80%]">
+                <h1
+                  class="text-sm md:text-base lg:text-sm xl:text-base font-bold"
+                >
+                  Những lưu ý khi chơi bài mậu binh cần ghi nhớ
+                </h1>
+                <div class="text-xs md:text-sm lg:text-xs xl:text-sm">
+                  <span> <ion-icon name="time-outline"></ion-icon> </span>
+                  <span> 10:38:CHIỀU </span>
+                  <span class="pl-1">
+                    <ion-icon name="calendar-outline"></ion-icon>
+                  </span>
+                  <span> 15 THÁNG SÁU 2022 </span>
+                </div>
+              </div></a
+            >
+          </div>
+
+          <div>
+            <a
+              class="flex space-x-3 pr-1"
+              href="./cach-bat-keo-trong-bong-da.html"
+            >
+              <div class="w-[20%] md:w-[10%] lg:w-[20%] xl:w-[20%]">
+                <img
+                  class="w-full"
+                  src="./Images/iconCards/iconcard4.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="space-y-1 w-[80%] md:w-[70%] lg:w-[80%] xl:w-[80%]">
+                <h1
+                  class="text-sm md:text-base lg:text-sm xl:text-base font-bold"
+                >
+                  Cách bắt kèo trong bóng đá tại nhà cái uy tín VN365s
+                </h1>
+                <div class="text-xs md:text-sm lg:text-xs xl:text-sm">
+                  <span> <ion-icon name="time-outline"></ion-icon> </span>
+                  <span> 10:33:CHIỀU </span>
+                  <span class="pl-1">
+                    <ion-icon name="calendar-outline"></ion-icon>
+                  </span>
+                  <span> 15 THÁNG SÁU 2022 </span>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- <div class="flex space-x-3 pr-1">
+            <div>
+              <img
+                class="w-[130px] md:w-[70px] lg:w-52 xl:w-32"
+                src="./Images/iconCards/iconcard5.jpg"
+                alt=""
+              />
+            </div>
+            <div class="space-y-1">
+              <h1
+                class="text-sm md:text-base lg:text-sm xl:text-base font-bold"
+              >
+                Bật mí các cách chia bài ba cây điểm cao dành cho người chơi mới
+              </h1>
+              <div class="text-xs md:text-sm lg:text-xs xl:text-sm">
+                <span> <ion-icon name="time-outline"></ion-icon> </span>
+                <span> 10:14:SÁNG </span>
+                <span>
+                  <ion-icon name="calendar-outline"></ion-icon>
+                </span>
+                <span> 17 THÁNG SÁU 2022 </span>
+              </div>
+            </div>
+          </div> -->
+
+          <!-- <div class="flex space-x-3 pr-1">
+            <div>
+              <img
+                class="w-[130px] md:w-[70px] lg:w-52 xl:w-32"
+                src="./Images/iconCards/iconcard6.jpg"
+                alt=""
+              />
+            </div>
+            <div class="space-y-1">
+              <h1
+                class="text-sm md:text-base lg:text-sm xl:text-base font-bold"
+              >
+                Bật mí các cách chia bài ba cây điểm cao dành cho người chơi mới
+              </h1>
+              <div class="text-xs md:text-sm lg:text-xs xl:text-sm">
+                <span> <ion-icon name="time-outline"></ion-icon> </span>
+                <span> 10:14:SÁNG </span>
+                <span>
+                  <ion-icon name="calendar-outline"></ion-icon>
+                </span>
+                <span> 17 THÁNG SÁU 2022 </span>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+
+      <!-- footer -->
+      <div
+        class="grid md:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-8 lg:gap-10 bg-[#191919] px-6 py-20 font-semibold"
+      >
+        <div class="flex justify-center items-center lg:items-start">
+          <img
+            class="h-[70px] lg:h-14 xl:h-20"
+            src="./Images/logo-d9bet-biz.png"
+            alt=""
+          />
+        </div>
+        <div class="lg:space-y-5 space-y-3">
+          <div class="border-b border-gray-200 text-white pb-2">
+            <h1 class="font-bold text-lg lg:text-xl 2xl:text-2xl">CÁ CƯỢC</h1>
+          </div>
+          <div
+            class="lg:text-base text-sm text-gray-400 space-y-1 lg:space-y-2 xl:space-y-3"
+          >
+            <p>Thể Thao</p>
+            <p>Đá Gà</p>
+            <p>Casino Trực Tuyến</p>
+          </div>
+        </div>
+        <div class="lg:space-y-5 space-y-3">
+          <div class="border-b border-gray-200 text-white pb-2">
+            <h1 class="font-bold text-lg lg:text-xl 2xl:text-2xl">HƯỚNG DẪN</h1>
+          </div>
+          <div
+            class="lg:text-base text-sm text-gray-400 space-y-1 lg:space-y-2 xl:space-y-3"
+          >
+            <p class=" hover:text-white transition-all duration-100"><a href="./dang-ky.html">Đăng Ký VN365s</a></p>
+            <p class=" hover:text-white transition-all duration-100"><a href="./nap-tien.html">Nạp Tiền VN365s</a></p>
+            <p class=" hover:text-white transition-all duration-100"><a href="./rut-tien.html">Rút Tiền VN365s</a></p>
+            <p class=" hover:text-white transition-all duration-100"><a href="./khuyen-mai.html">Khuyến Mãi VN365s</a></p>
+          </div>
+        </div>
+
+        <div class="space-y-3 xl:space-y-5 text-white">
+          <div class="border-b border-gray-200 text-white pb-2">
+            <h1 class="font-bold text-lg lg:text-xl 2xl:text-2xl">LIÊN HỆ</h1>
+          </div>
+          <p class="lg:text-base text-sm">
+            32t8 Âu Dương Lân, Phường 3, Quận 8, Thành phố Hồ Chí Minh
+          </p>
+          <p class="lg:text-base text-sm">0969581241</p>
+
+          <p>https://vn365s.xyz/</p>
+        </div>
+      </div>
+      <div
+        class="bg-[#0D0F26] px-6 py-8 space-y-2 md:space-y-0 md:flex justify-between items-center text-gray-200"
+      >
+        <p class="lg:text-base text-sm text-center">© Copyright by vn365s.xyz</p>
+        <div class="flex justify-center items-center">
+          <div class="flex items-center space-x-2 md:space-x-4">
+            <p class="lg:text-base text-xs md:text-sm">
+              Giới Thiệu | Chính Sách Bảo Mật | Liên Hệ
+            </p>
+            <ion-icon
+              name="chevron-up-outline"
+              class="text-2xl lg:text-3xl"
+            ></ion-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

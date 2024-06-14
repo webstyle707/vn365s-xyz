@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>cach-danh-dau-duoi-mien-bac</title>
+  </head>
+  <body class="bg-[#EFEFEF]">
+    <div class="bg-[#FFFFFF] mx-auto max-w-[1465px] border px-[18px]">
+
+       <!-- side nav -->
+       <div class="hideandshow h-screen w-[65%] md:w-[40%] lg:hidden fixed  top-0 bg-gray-200 bg-opacity-95 z-20 ">
+
+        <div class="w-full h-full space-y-6">
+         <div class=" absolute top-4 right-3 text-2xl text-gray-600">
+           <ion-icon onclick="hideSideNav()" name="close-outline"></ion-icon>
+         </div>
+         <div class=" px-3 pt-8">
+           <img class="w-40" src="./Images/logo-d9bet-biz.png" alt="">
+         </div>
+         <div
+         class="w-full h-full flex flex-col space-y-4 *:pb-2 *:border-b *:border-gray-400 *:pl-3 text-sm px-px *:hover:border-[#FF5200]"
+       >
+         <a href="./index.html"> TRANG CHỦ </a>
+         <a href="./dang-ky.html"> ĐĂNG KÝ </a>
+         <a href="./nap-tien.html"> NẠP TIỀN </a>
+         <a href="./rut-tien.html"> RÚT TIỀN </a>
+         <a href="./khuyen-mai.html"> KHUYẾN MÃI </a>
+         <a href="./thu-thuat-ca-cuoc.html"> THỦ THUẬT CÁ CƯỢC </a>
+       </div>
+        </div>
+       </div>
+       
+      <!-- Header -->
+      <div>
+        <!-- header -->
+        <div class="w-full bg-[#161616] lg:block hidden">
+          <div class="flex justify-between items-center px-[20px] py-3">
+            <div>
+              <img class="h-[100px]" src="./Images/logo-d9bet-biz.png" alt="" />
+            </div>
+            <div class="flex items-center space-x-3 text-white">
+              <a href="https://www.hay88.one/?inviteCode=1751262">
+                <button
+                  class="bg-[#009FE3] hover:bg-[#007FB6] transition-all duration-200 font-bold py-[10px] px-6 rounded-full"
+                >
+                  ĐĂNG NHẬP
+                </button>
+              </a>
+              <a href="https://www.hay88.one/?inviteCode=1751262">
+                <button
+                  class="bg-[#FF5200] hover:bg-[#CC4200] transition-all duration-200 font-bold py-[10px] px-10 rounded-full"
+                >
+                  ĐĂNG KÝ
+                </button>
+              </a>
+            </div>
+          </div>
+          <div
+            class="flex items-center font-semibold text-white *:px-6 *:py-5 border-t border-[#FF5200]"
+          >
+            <a
+              class="transition-all duration-300 hover:bg-[#FF5200]"
+              href="./index.html"
+              >TRANG CHỦ</a
+            >
+            <a
+              class="transition-all duration-300 hover:bg-[#FF5200]"
+              href="./dang-ky.html"
+              >ĐĂNG KÝ</a
+            >
+            <a
+              class="transition-all duration-300 hover:bg-[#FF5200]"
+              href="./nap-tien.html"
+              >NẠP TIỀN</a
+            >
+            <a
+              class="transition-all duration-300 hover:bg-[#FF5200]"
+              href="./rut-tien.html"
+              >RÚT TIỀN</a
+            >
+            <a
+              class="transition-all duration-300 hover:bg-[#FF5200]"
+              href="./khuyen-mai.html"
+              >KHUYẾN MÃI</a
+            >
+            <a class="bg-[#FF5200]" href="./thu-thuat-ca-cuoc.html"
+              >THỦ THUẬT CÁ CƯỢC</a
+            >
+          </div>
+        </div>
+
+        <!-- sm header -->
+        <div class="w-full bg-[#161616] lg:hidden block">
+          <div class="flex justify-center items-center py-4">
+            <img src="./Images/logo-d9bet-biz.png" alt="" />
+          </div>
+          <div class="py-4 border-t border-[#FF5200]">
+            <div class="justify-between flex items-center px-2 md:px-5">
+              <div onclick="showSideNav()" class="text-3xl text-white">
+                <ion-icon name="menu-outline"></ion-icon>
+              </div>
+              <div class="flex items-center md:space-x-3 space-x-2 text-white">
+                <a href="https://www.hay88.one/?inviteCode=1751262">
+                  <button
+                    class="bg-[#009FE3] hover:bg-[#007FB6] transition-all duration-200 font-bold text-xs md:text-base pb-[6px] pt-[8px] px-4 md:px-6 rounded-full"
+                  >
+                    ĐĂNG NHẬP
+                  </button>
+                </a>
+                <a href="https://www.hay88.one/?inviteCode=1751262">
+                  <button
+                    class="bg-[#FF5200] hover:bg-[#CC4200] transition-all duration-200 font-bold text-xs md:text-base pb-[6px] pt-[8px] px-6 md:px-10 rounded-full"
+                  >
+                    ĐĂNG KÝ
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- container -->
+      <div
+        class="w-full lg:flex space-y-8 lg:space-y-0 lg:space-x-3 xl:space-x-8 py-8"
+      >
+        <div class="w-full lg:w-[68%] space-y-8">
+          <div class="space-y-8">
+            <div>
+              <p class="text-lg">
+                <span class="text-blue-400"
+                  ><a href="./index.html">Trang chủ</a></span
+                >
+                \
+                <span class="text-blue-400"
+                  ><a href="./thu-thuat-ca-cuoc.html"
+                    >Thủ Thuật Cá Cược</a
+                  ></span
+                >
+                \ Những lưu ý khi chơi bài mậu binh cần ghi nhớ
+              </p>
+            </div>
+          </div>
+          <div class="w-full space-y-8 border border-gray-100 pb-10">
+            <!-- 1 -->
+            <div class="space-y-6">
+              <div class="">
+                <img class="w-full" src="/Images/nhung-luu-y-khi-choi-bai/1.jpg" alt="" />
+              </div>
+              <div class="space-y-6 px-4 pb-10">
+                <div class="space-y-4">
+                  <h1 class="text-3xl font-bold">
+                    Những lưu ý khi chơi bài mậu binh cần ghi nhớ
+                  </h1>
+                  <p class="text-sm space-x-1 text-gray-400 font-semibold">
+                    <span><ion-icon name="pencil-outline"> </ion-icon></span>
+                    <span> VN365s XYZ </span>
+                    <span><ion-icon name="time-outline"></ion-icon></span>
+                    <span> 15 THÁNG SÁU 2022 </span>
+                    <span>
+                      <ion-icon name="folder-open-outline"> </ion-icon></span
+                    ><span> THỦ THUẬT CÁ CƯỢC</span>
+                  </p>
+                </div>
+
+                <p>
+                  Bài mậu binh đang trở lên khá hot tại Việt Nam nhất là khi nó
+                  được cung cấp bời các nhà cái cá cược online. Tuy nhiên, nhiều
+                  người chơi mới tham gia bộ môn này và than phiền rằng không
+                  thể kiếm lời. Đó một phần là do bạn vẫn chưa có nhiều kinh
+                  nghiệm khi chơi bài mậu binh. Vì vậy, trong bài viết này hãy
+                  cùng <span class=" font-bold text-blue-400"> VN365s </span> tìm hiểu <span class=" font-bold text-blue-400"> những lưu ý khi chơi bài mậu binh cần ghi
+                    nhớ</span>.
+                </p>
+
+                <!-- img2 -->
+                <div
+                  class="flex flex-col justify-center items-center p-1 md:p-2 lg:p-3 w-full lg:w-11/12 mx-auto border"
+                >
+                  <div class="w-full">
+                    <img class="w-full" src="./Images/nhung-luu-y-khi-choi-bai/2.jpg" alt="" />
+                  </div>
+                  <p class="w-full text-center pt-2">
+                    Tổng quan về nhà cái VN365s
+                  </p>
+                </div>
+                <div class="space-y-5">
+                  <h1 class="font-bold text-2xl">Mậu binh là gì</h1>
+
+                  <p>
+                    Vì không phải là game bài nổi tiếng nhất ở Việt Nam nên có
+                    thể người chơi vẫn cần phải giới thiệu qua về khái niệm mậu
+                    binh. Game bài mậu binh còn có nhiều cái tên khác như xập
+                    xám hay thập tam tức. Dù là game bài nhưng mậu binh đòi hỏi
+                    người chơi phải suy nghĩ khá nhiều khi tham gia. Một bàn
+                    chơi mậu binh thông thường cũng chứa từ 2 đến 4 người giống
+                    như những game bài khác.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2 -->
+            <div class="space-y-8 px-4">
+              <div class="space-y-5">
+                <!-- img3 -->
+                <div
+                  class="flex flex-col justify-center items-center p-1 md:p-2 lg:p-3 w-full lg:w-11/12 mx-auto border"
+                >
+                  <div class="w-full">
+                    <img class="w-full" src="./Images/nhung-luu-y-khi-choi-bai/3.jpg" alt="" />
+                  </div>
+                  <p class="w-full text-center pt-2">Mậu binh là gì</p>
+                </div>
+                <p>
+                  Để có thể chiến thắng được mậu binh thì người chơi cần có kỹ
+                  năng xếp bài nhanh và chính xác. Luật chơi của nó khá đơn
+                  giản, mỗi người chơi cần chia bộ bài của mình thành 3 chi.
+                  Trong đó, 2 chi đầu tiên gồm 5 quân bài và chi cuối cùng gồm 3
+                  quân bài. Sau đó, các người chơi sẽ so sánh từng chi với nhau.
+                  Việc sắp xếp các quân bài cũng khá quan trọng vì bạn sẽ phải
+                  xếp các chi có độ mạnh giảm dần.
+                </p>
+              </div>
+              <p>
+                Nếu như bạn chơi mậu binh online thì sẽ không phải lo lắng về
+                vấn đề xếp bài vì máy tính sẽ tự động xếp cho người chơi một
+                cách chuẩn xác. Chính vì thế, thời gian một ván mậu binh online
+                cũng là nhanh hơn rất nhiều so với người chơi truyền thống. Bạn
+                sẽ chỉ mất tầm 5 giây để máy tính so sánh bài của các người chơi
+                với nhau. Dù chơi online hay truyền thống thì bạn vẫn cần tìm
+                hiểu qua <span class=" font-bold"> những lưu ý khi chơi bài mậu binh cần ghi nhớ </span> mà các
+                chuyên gia đã đúc kết được.
+              </p>
+              <div class="flex items-center space-x-5 text-lg">
+                <p class="h-10 border-2 border-gray-300"></p>
+                <p>
+                  <span class="font-bold"> =>> Xem thêm:</span>
+                  <span
+                    class="font-bold text-blue-400 cursor-pointer hover:text-blue-500 transition-all duration-200"
+                  >
+                    Đầu đuôi miền Bắc là gì và có những cách đánh đầu đuôi miền
+                    Bắc nào?</span
+                  >
+                </p>
+              </div>
+            </div>
+
+            <!-- 3 -->
+            <div class="space-y-8 px-4">
+              <div class="space-y-5">
+                <h1 class="font-bold text-2xl">Lưu ý khi chơi bài mậu binh</h1>
+                <p>
+                  Nghe qua cách chơi mậu binh thì có vẻ là khá đơn giản và ai
+                  cũng có thể học được. Tuy nhiên, để chơi mậu binh giỏi thì
+                  người chơi cần có một kinh nghiệm thực tế khá dạn dày. Nếu bạn
+                  là người chơi mới thì không dễ gì để có được những kinh nghiệm
+                  này. Vì thế, hãy lắng nghe xem chuyên gia có những lưu ý khi
+                  chơi bài mậu binh cần ghi nhớ gì.
+                </p>
+                <!-- img4 -->
+                <div
+                  class="flex flex-col justify-center items-center p-1 md:p-2 lg:p-3 w-full lg:w-11/12 mx-auto border"
+                >
+                  <div class="w-full">
+                    <img class="w-full" src="./Images/nhung-luu-y-khi-choi-bai/4.jpg" alt="" />
+                  </div>
+                  <p class="w-full text-center pt-2">
+                    Một vài cách chơi bài mậu binh
+                  </p>
+                </div>
+
+                <h1 class="font-bold text-xl">Kỹ thuật xếp binh xập xám</h1>
+                <p>
+                  Tư duy xếp bài là một trong những điều quan trọng nhất mà
+                  người chơi cần phải bổ sung khi chơi mậu binh. Ngoài việc rèn
+                  luyện thường xuyên thì cũng có một vài kỹ thuật có thể giúp
+                  người chơi giành chiến thắng trong trận đấu cụ thể. Nên nhớ,
+                  cách xếp bài chiếm đến hơn 50% tỷ lệ giành chiến thắng của
+                  người chơi. Chính vì vậy, qua từng trận đấu hãy tự rút ra kinh
+                  nghiệm cho mình để có được cách xếp bài hiệu quả nhất.
+                </p>
+              </div>
+
+              <div class="space-y-5">
+                <h1 class="font-bold text-xl">Nghệ thuật cách binh</h1>
+                <p>
+                  Kỹ thuật này được hiểu nôm na là xu hướng người chơi hay để 2
+                  chi sau mạnh và chi đầu yếu. Vì thế nên anh em cần phải lợi
+                  dụng điều này để khắc chế. Dù vậy, không phải ai cũng có lối
+                  chơi này nên bạn cần phải quan sát cách xếp bài của đối thủ
+                  qua vài lượt đầu tiên.
+                </p>
+              </div>
+
+              <div class="space-y-5">
+                <h1 class="font-bold text-xl">
+                  Cách binh theo kiểu 3 thùng phé
+                </h1>
+                <p>
+                  Cách binh theo kiểu 3 thùng phé có nghĩa là người chơi xếp đôi
+                  mạnh nhất của mình vào chi giữa. Các chuyên gia thường hay áp
+                  dụng cách này khi bài có đôi lớn và thùng. Cách chơi này sẽ
+                  đảm bảo cho bạn không bị sập cả 3 chi và đương nhiên là cũng
+                  không lo bị lỗ. Ngoài ra, người chơi cũng có thể né được một
+                  số trường hợp bài xấu và khả năng thắng ko cao.
+                </p>
+              </div>
+
+              <div class="space-y-5">
+                <h1 class="font-bold text-xl">
+                  Cách xếp binh theo kiểu sảnh 3 đao
+                </h1>
+                <p>
+                  Với cách chơi này, bạn cần để chi 1 là sảnh và tiếp theo là 3
+                  đôi. Người chơi có thể để đôi mạnh nhất ở chi giữa hay chi
+                  cuối tùy thích. Tuy nhiên, thực tế cho thấy thì nếu người chơi
+                  để ở chi cuối thì sẽ có khả năng giành chiến thắng cao hơn.
+                </p>
+              </div>
+
+              <div class="space-y-5">
+                <h1 class="font-bold text-xl">Kỹ thuật xếp thú phé thủ</h1>
+                <p>
+                  Người chơi khi áp dụng kỹ thuật này sẽ xếp 2 đôi ở chi giữa và
+                  2 đôi ở chi đầu. Tuy nhiên, cách xếp này cũng không thể đảm
+                  bảo cho bạn giành chiến thắng. Vì vậy, nếu được thì bạn nên
+                  tách 1 đôi bất kỳ xếp ở chi thứ 3 thì khả năng giành chiến
+                  thắng sẽ cao hơn. Cách xếp binh này phù hợp với những anh em
+                  mới chơi vì nó khá đơn giản cũng như anh em chưa quen luật vẫn
+                  có thể áp dụng dễ dàng.
+                </p>
+              </div>
+
+              <ul class="list-disc pl-6 space-y-1">
+                <li>
+                  Không nên chơi mậu binh khi mệt mỏi vì có thể khả năng phán
+                  đoán và xếp bài của bạn sẽ bị giảm đi. Tốt nhất khi mệt mỏi
+                  thì bạn nên tìm cách thư giãn chi không phải chơi cờ bạc.
+                </li>
+                <li>
+                  Nếu cảm thấy đối thủ quá khó chơi thì hãy lựa chọn bàn chơi
+                  khác. Một số người chơi mới có thể sẽ bị ngợp trước những anh
+                  em đã có kinh nghiệm từ trước. Vì thế, cách giải quyết sẽ là
+                  tìm một bàn chơi mới để không bị bắt bài.
+                </li>
+                <li>
+                  Biết dùng đúng lúc cũng là một lưu ý khá quan trọng khi chơi
+                  mậu binh. Vì một ván mậu binh online diễn ra cũng khá nhanh
+                  nên người chơi rất dễ bị cuốn, nhất là khi đang thua lỗ.
+                </li>
+              </ul>
+
+              <div class="space-y-5">
+                <h1 class="font-bold text-xl">Chơi mậu binh online ở đâu</h1>
+                <p>
+                  Chơi mậu binh online đang là giải pháp được rất nhiều người
+                  lựa chọn thời gian gần đây vì có được những hỗ trợ từ máy
+                  tính. Mậu binh online cũng rất phù hợp với những anh em chưa
+                  biết gì về bộ môn này. Tuy nhiên, câu hỏi sẽ là chơi mậu binh
+                  online ở đâu? Có rất nhiều nhà cái casino tại Việt Nam nhưng
+                  bài viết sẽ giới thiệu đến cho bạn một nhà cái mới nổi đó là
+                 VN365s.
+                </p>
+              </div>
+            </div>
+
+            <!-- 4 -->
+            <div class="space-y-8 px-4">
+              <div class="space-y-5">
+                <!-- img5 -->
+                <div
+                  class="flex flex-col justify-center items-center p-1 md:p-2 lg:p-3 w-full lg:w-11/12 mx-auto border"
+                >
+                  <div class="w-full">
+                    <img class="w-full" src="./Images/nhung-luu-y-khi-choi-bai/5.jpg" alt="" />
+                  </div>
+                  <p class="w-full text-center pt-2">
+                    Chơi mậu binh online ở đâu
+                  </p>
+                </div>
+
+                <p>
+                 VN365s ra đời với sứ mệnh đem đến cho thị trường cá cược Châu Á
+                  một làn gió mới. Nhà cáiVN365s cung cấp rất nhiều dịch vụ cá
+                  cược khác nhau bao gồm cả thể thao, game slots và không thể
+                  thiếu đó là game bài. Game bài mậu binh cũng được các dân chơi
+                  đánh giá khá cao ở nhà cái này.
+                </p>
+              </div>
+
+              <div class="space-y-5">
+                <p>
+                  Nếu như bạn chưa từng nghe đến cái tênVN365s thì cũng là một
+                  điều dễ hiểu vì nhà cái này mới chỉ tham gia vào thị trường
+                  Việt Nam gần đây, thậm chí mới trong giai đoạn demo. Tuy
+                  nhiên, thông tin về nhà cái này rất dễ tìm kiếm và cũng khá uy
+                  tín. Họ đặt trụ sở chính của mình tại Malta, một đất nước được
+                  tạo điều kiện rất nhiều về cá cược online tại Châu Âu. Chính
+                  vì vậy,VN365s có thể đem đến cho Châu Á nói chung rất nhiều
+                  công nghệ tiên tiến trong dịch vụ của mình.
+                </p>
+
+                <div class="flex items-center space-x-5 text-lg">
+                  <p class="h-10 border-2 border-gray-300"></p>
+                  <p>
+                    <span class="font-bold"> =>> Xem thêm:</span>
+                    <span
+                      class="font-bold text-blue-400 cursor-pointer hover:text-blue-500 transition-all duration-200"
+                    >
+                      Cách tính đề chuẩn nhất, đơn giản nhất năm 2022</span
+                    >
+                  </p>
+                </div>
+
+                <p>
+                  Không những thế, mọi loại giao dịch tạiVN365s đều được thực
+                  hiện vô cùng nhanh chóng. Đây là một trong những điều kiện cần
+                  thiết cho anh em chơi game bài như mậu binh hay một số tựa
+                  game khác. Ngoài ra, nếu như đăng kýVN365s ở thời điểm hiện
+                  tại thì người chơi sẽ có cơ hội nhận về rất nhiều phần quà hấp
+                  dẫn. Hiện nay,VN365s đang tặng rất nhiều phần quà đặc biệt cho
+                  người chơi đăng ký mới tại nhà cái này.
+                </p>
+              </div>
+
+              <p>
+                Hy vọng sau bài viết này, người chơi đã nắm được những lưu ý khi
+                chơi bài mậu binh cần ghi nhớ. Khi đã nắm được hết những lưu ý
+                này thì bạn có thể tự tin lập tài khoản và bắt đầu chơi bài mậu
+                binh tại vn365s.xyz.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-full lg:w-[32%] space-y-5">
+          <div class="flex items-center w-full">
+            <div class="w-[40%] border-2 border-red-600"></div>
+            <div class="w-[60%] border-2 border-gray-200"></div>
+          </div>
+
+          <div>
+            <a
+              class="flex space-x-3 pr-1"
+              href="./cach-chia-bai-ba-cay-diem-cao.html"
+            >
+              <div class="w-[20%] md:w-[10%] lg:w-[20%] xl:w-[20%]">
+                <img
+                  class="w-full"
+                  src="./Images/iconCards/iconcard1.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="w-[80%] md:w-[70%] lg:w-[80%] xl:w-[80%] space-y-1">
+                <h1
+                  class="text-sm md:text-base lg:text-sm xl:text-base font-bold"
+                >
+                  Bật mí các cách chia bài ba cây điểm cao dành cho người chơi
+                  mới
+                </h1>
+                <div class="text-xs md:text-sm lg:text-xs xl:text-sm">
+                  <span> <ion-icon name="time-outline"></ion-icon> </span>
+                  <span> 10:14:SÁNG </span>
+                  <span class="pl-1">
+                    <ion-icon name="calendar-outline"></ion-icon>
+                  </span>
+                  <span> 17 THÁNG SÁU 2022 </span>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div>
+            <a
+              class="flex space-x-3 pr-1"
+              href="./cach-danh-dau-duoi-mien-bac.html"
+            >
+              <div class="w-[20%] md:w-[10%] lg:w-[20%] xl:w-[20%]">
+                <img
+                  class="w-full"
+                  src="./Images/iconCards/iconcard2.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="w-[80%] md:w-[70%] lg:w-[80%] xl:w-[80%] space-y-1">
+                <h1
+                  class="text-sm md:text-base lg:text-sm xl:text-base font-bold"
+                >
+                  Đầu đuôi miền Bắc là gì và có những cách đánh đầu đuôi miền
+                  Bắc nào?
+                </h1>
+                <div class="text-xs md:text-sm lg:text-xs xl:text-sm">
+                  <span> <ion-icon name="time-outline"></ion-icon> </span>
+                  <span> 10:43:CHIỀU </span>
+                  <span class="pl-1">
+                    <ion-icon name="calendar-outline"></ion-icon>
+                  </span>
+                  <span> 15 THÁNG SÁU 2022 </span>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div>
+            <a
+              class="flex space-x-3 pr-1"
+              href="./nhung-luu-y-khi-choi-bai-mau-binh-can-ghi-nho.html"
+            >
+              <div class="w-[20%] md:w-[10%] lg:w-[20%] xl:w-[20%]">
+                <img
+                  class="w-full"
+                  src="./Images/iconCards/iconcard3.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="space-y-1 w-[80%] md:w-[70%] lg:w-[80%] xl:w-[80%]">
+                <h1
+                  class="text-sm md:text-base lg:text-sm xl:text-base font-bold"
+                >
+                  Những lưu ý khi chơi bài mậu binh cần ghi nhớ
+                </h1>
+                <div class="text-xs md:text-sm lg:text-xs xl:text-sm">
+                  <span> <ion-icon name="time-outline"></ion-icon> </span>
+                  <span> 10:38:CHIỀU </span>
+                  <span class="pl-1">
+                    <ion-icon name="calendar-outline"></ion-icon>
+                  </span>
+                  <span> 15 THÁNG SÁU 2022 </span>
+                </div>
+              </div></a
+            >
+          </div>
+
+          <div>
+            <a
+              class="flex space-x-3 pr-1"
+              href="./cach-bat-keo-trong-bong-da.html"
+            >
+              <div class="w-[20%] md:w-[10%] lg:w-[20%] xl:w-[20%]">
+                <img
+                  class="w-full"
+                  src="./Images/iconCards/iconcard4.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="space-y-1 w-[80%] md:w-[70%] lg:w-[80%] xl:w-[80%]">
+                <h1
+                  class="text-sm md:text-base lg:text-sm xl:text-base font-bold"
+                >
+                  Cách bắt kèo trong bóng đá tại nhà cái uy tín D9Bet
+                </h1>
+                <div class="text-xs md:text-sm lg:text-xs xl:text-sm">
+                  <span> <ion-icon name="time-outline"></ion-icon> </span>
+                  <span> 10:33:CHIỀU </span>
+                  <span class="pl-1">
+                    <ion-icon name="calendar-outline"></ion-icon>
+                  </span>
+                  <span> 15 THÁNG SÁU 2022 </span>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- <div class="flex space-x-3 pr-1">
+            <div>
+              <img
+                class="w-[130px] md:w-[70px] lg:w-52 xl:w-32"
+                src="./Images/iconCards/iconcard5.jpg"
+                alt=""
+              />
+            </div>
+            <div class="space-y-1">
+              <h1
+                class="text-sm md:text-base lg:text-sm xl:text-base font-bold"
+              >
+                Bật mí các cách chia bài ba cây điểm cao dành cho người chơi mới
+              </h1>
+              <div class="text-xs md:text-sm lg:text-xs xl:text-sm">
+                <span> <ion-icon name="time-outline"></ion-icon> </span>
+                <span> 10:14:SÁNG </span>
+                <span>
+                  <ion-icon name="calendar-outline"></ion-icon>
+                </span>
+                <span> 17 THÁNG SÁU 2022 </span>
+              </div>
+            </div>
+          </div> -->
+
+          <!-- <div class="flex space-x-3 pr-1">
+            <div>
+              <img
+                class="w-[130px] md:w-[70px] lg:w-52 xl:w-32"
+                src="./Images/iconCards/iconcard6.jpg"
+                alt=""
+              />
+            </div>
+            <div class="space-y-1">
+              <h1
+                class="text-sm md:text-base lg:text-sm xl:text-base font-bold"
+              >
+                Bật mí các cách chia bài ba cây điểm cao dành cho người chơi mới
+              </h1>
+              <div class="text-xs md:text-sm lg:text-xs xl:text-sm">
+                <span> <ion-icon name="time-outline"></ion-icon> </span>
+                <span> 10:14:SÁNG </span>
+                <span>
+                  <ion-icon name="calendar-outline"></ion-icon>
+                </span>
+                <span> 17 THÁNG SÁU 2022 </span>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+
+      <!-- footer -->
+      <div
+        class="grid md:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-8 lg:gap-10 bg-[#191919] px-6 py-20 font-semibold"
+      >
+        <div class="flex justify-center items-center lg:items-start">
+          <img
+            class="h-[70px] lg:h-14 xl:h-20"
+            src="./Images/logo-d9bet-biz.png"
+            alt=""
+          />
+        </div>
+        <div class="lg:space-y-5 space-y-3">
+          <div class="border-b border-gray-200 text-white pb-2">
+            <h1 class="font-bold text-lg lg:text-xl 2xl:text-2xl">CÁ CƯỢC</h1>
+          </div>
+          <div
+            class="lg:text-base text-sm text-gray-400 space-y-1 lg:space-y-2 xl:space-y-3"
+          >
+            <p>Thể Thao</p>
+            <p>Đá Gà</p>
+            <p>Casino Trực Tuyến</p>
+          </div>
+        </div>
+        <div class="lg:space-y-5 space-y-3">
+          <div class="border-b border-gray-200 text-white pb-2">
+            <h1 class="font-bold text-lg lg:text-xl 2xl:text-2xl">HƯỚNG DẪN</h1>
+          </div>
+          <div
+            class="lg:text-base text-sm text-gray-400 space-y-1 lg:space-y-2 xl:space-y-3"
+          >
+            <p class="hover:text-white transition-all duration-100">
+              <a href="./dang-ky.html">Đăng Ký VN365s</a>
+            </p>
+            <p class="hover:text-white transition-all duration-100">
+              <a href="./nap-tien.html">Nạp Tiền VN365s</a>
+            </p>
+            <p class="hover:text-white transition-all duration-100">
+              <a href="./rut-tien.html">Rút Tiền VN365s</a>
+            </p>
+            <p class="hover:text-white transition-all duration-100">
+              <a href="./khuyen-mai.html">Khuyến Mãi VN365s</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="space-y-3 xl:space-y-5 text-white">
+          <div class="border-b border-gray-200 text-white pb-2">
+            <h1 class="font-bold text-lg lg:text-xl 2xl:text-2xl">LIÊN HỆ</h1>
+          </div>
+          <p class="lg:text-base text-sm">
+            32t8 Âu Dương Lân, Phường 3, Quận 8, Thành phố Hồ Chí Minh
+          </p>
+          <p class="lg:text-base text-sm">0969581241</p>
+
+          <p>https://vn365s.xyz/</p>
+        </div>
+      </div>
+      <div
+        class="bg-[#0D0F26] px-6 py-8 space-y-2 md:space-y-0 md:flex justify-between items-center text-gray-200"
+      >
+        <p class="lg:text-base text-sm text-center">© Copyright by vn365s.xyz</p>
+        <div class="flex justify-center items-center">
+          <div class="flex items-center space-x-2 md:space-x-4">
+            <p class="lg:text-base text-xs md:text-sm">
+              Giới Thiệu | Chính Sách Bảo Mật | Liên Hệ
+            </p>
+            <ion-icon
+              name="chevron-up-outline"
+              class="text-2xl lg:text-3xl"
+            ></ion-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

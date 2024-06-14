@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Khuyến mãi VN365s hấp dẫn và giá trị mà người chơi không thể bỏ qua</title>
+  </head>
+  <body class="bg-[#EFEFEF]">
+    <div class="bg-[#FFFFFF] mx-auto max-w-[1465px] border px-[18px]">
+
+       <!-- side nav -->
+       <div class="hideandshow h-screen w-[65%] md:w-[40%] lg:hidden fixed  top-0 bg-gray-200 bg-opacity-95 z-20 ">
+
+        <div class="w-full h-full space-y-6">
+         <div class=" absolute top-4 right-3 text-2xl text-gray-600">
+           <ion-icon onclick="hideSideNav()" name="close-outline"></ion-icon>
+         </div>
+         <div class=" px-3 pt-8">
+           <img class="w-40" src="./Images/logo-d9bet-biz.png" alt="">
+         </div>
+         <div
+         class="w-full h-full flex flex-col space-y-4 *:pb-2 *:border-b *:border-gray-400 *:pl-3 text-sm px-px *:hover:border-[#FF5200]"
+       >
+         <a href="./index.html"> TRANG CHỦ </a>
+         <a href="./dang-ky.html"> ĐĂNG KÝ </a>
+         <a href="./nap-tien.html"> NẠP TIỀN </a>
+         <a href="./rut-tien.html"> RÚT TIỀN </a>
+         <a href="./khuyen-mai.html"> KHUYẾN MÃI </a>
+         <a href="./thu-thuat-ca-cuoc.html"> THỦ THUẬT CÁ CƯỢC </a>
+       </div>
+        </div>
+       </div>
+
+       
+      <!-- Header -->
+      <div>
+          <!-- header -->
+      <div class="w-full bg-[#161616] lg:block hidden">
+        <div class="flex justify-between items-center px-[20px] py-3">
+          <div>
+            <img class="h-[100px]" src="./Images/logo-d9bet-biz.png" alt="" />
+          </div>
+          <div class="flex items-center space-x-3 text-white">
+            <a href="https://www.hay88.one/?inviteCode=1751262">
+              <button
+                class="bg-[#009FE3] hover:bg-[#007FB6] transition-all duration-200 font-bold py-[10px] px-6 rounded-full"
+              >
+                ĐĂNG NHẬP
+              </button>
+            </a>
+            <a href="https://www.hay88.one/?inviteCode=1751262">
+              <button
+                class="bg-[#FF5200] hover:bg-[#CC4200] transition-all duration-200 font-bold py-[10px] px-10 rounded-full"
+              >
+                ĐĂNG KÝ
+              </button>
+            </a>
+          </div>
+        </div>
+        <div
+          class="flex items-center font-semibold text-white *:px-6 *:py-5 border-t border-[#FF5200]"
+        >
+          <a class=" transition-all duration-300 hover:bg-[#FF5200]" href="./index.html">TRANG CHỦ</a>
+          <a
+            class="transition-all duration-300 hover:bg-[#FF5200]"
+            href="./dang-ky.html"
+            >ĐĂNG KÝ</a
+          >
+          <a
+            class="transition-all duration-300 hover:bg-[#FF5200]"
+            href="./nap-tien.html"
+            >NẠP TIỀN</a
+          >
+          <a
+            class="transition-all duration-300 hover:bg-[#FF5200]"
+            href="./rut-tien.html"
+            >RÚT TIỀN</a
+          >
+          <a
+            class="bg-[#FF5200]"
+            href="./khuyen-mai.html"
+            >KHUYẾN MÃI</a
+          >
+          <a
+            class="transition-all duration-300 hover:bg-[#FF5200]"
+            href="./thu-thuat-ca-cuoc.html"
+            >THỦ THUẬT CÁ CƯỢC</a
+          >
+        </div>
+      </div>
+
+        <!-- sm header -->
+        <div class="w-full bg-[#161616] lg:hidden block">
+          <div class="flex justify-center items-center py-4">
+            <img src="./Images/logo-d9bet-biz.png" alt="" />
+          </div>
+          <div class="py-4 border-t border-[#FF5200]">
+            <div class="justify-between flex items-center px-2 md:px-5">
+              <div onclick="showSideNav()" class="text-3xl text-white">
+                <ion-icon name="menu-outline"></ion-icon>
+              </div>
+              <div class="flex items-center md:space-x-3 space-x-2 text-white">
+                <a href="https://www.hay88.one/?inviteCode=1751262">
+                  <button
+                    class="bg-[#009FE3] hover:bg-[#007FB6] transition-all duration-200 font-bold text-xs md:text-base pb-[6px] pt-[8px] px-4 md:px-6 rounded-full"
+                  >
+                    ĐĂNG NHẬP
+                  </button>
+                </a>
+                <a href="https://www.hay88.one/?inviteCode=1751262">
+                  <button
+                    class="bg-[#FF5200] hover:bg-[#CC4200] transition-all duration-200 font-bold text-xs md:text-base pb-[6px] pt-[8px] px-6 md:px-10 rounded-full"
+                  >
+                    ĐĂNG KÝ
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- container -->
+      <div
+        class="w-full lg:flex space-y-8 lg:space-y-0 lg:space-x-3 xl:space-x-8 py-8"
+      >
+        <div class="w-full lg:w-[68%] space-y-8">
+          <div class="space-y-8">
+            <div>
+              <p class="text-lg">
+                <span class="text-blue-400"
+                  ><a href="./index.html">Trang chủ</a></span
+                >
+                \ Khuyến Mãi
+              </p>
+            </div>
+            <h1 class="text-3xl font-bold">KHUYẾN MÃI</h1>
+          </div>
+          <div class="w-full space-y-8 border p-5">
+            <!-- 1 -->
+            <div class="space-y-8">
+              <p>
+                Thị trường cá cược với hàng loạt nhà cái khác nhau khiến người
+                chơi khó lòng chọn cho mình một nhà cái xứng đáng để cá cược.
+                Chính vì vậy, nhà cái nào cũng áp dụng các chính sách ưu đãi,
+                khuyến mại để thu hút người chơi. Nếu bạn đang tìm kiếm một nhà
+                cái thật sự nổi bật về chương trình khuyến mãi thì đó chính là
+                <span class="text-[#438BCA] font-bold"> VN365s</span>. Cùng bài viết hôm nay tìm hiểu về các <span  class=" text-[#438BCA] font-bold">khuyến mãi VN365s</span> mà
+                bạn sẽ được nhận khi tham gia cá cược tại đây nhé.
+              </p>
+
+              <div class="space-y-5">
+                <h1 class="text-2xl font-bold">
+                  Giới thiệu chung về nhà cái VN365s
+                </h1>
+                <p>
+                  Nhà cái VN365s là một nhà cái trẻ mới hoạt động tại thị trường
+                  Việt Nam được vài năm. Tuy nhiên, nhà cái đã có nhiều năm hoạt
+                  động trên thị trường cá cược online của các nước như Thái Lan,
+                  Malaysia hay Philippines. Và mặc dù chỉ mới ra mắt tại nước ta
+                  nhưng VN365s vẫn có thể được xếp vào hàng top các nhà cái chất
+                  lượng hàng đầu với những gì mà nhà cái VN365s đã thể hiện.
+                </p>
+              </div>
+
+              <p>
+                Không quá cầu kì trong khâu thiết kế nhưng các sản phẩm cá cược
+                của nhà cái VN365s vẫn đảm bảo được sự chất lượng về mặt hình ảnh
+                lẫn nội dung. Các kèo cá cược của nhà cái cung cấp cũng vô cùng
+                hấp dẫn và nóng hổi với tỷ lệ trả thưởng cực kì cạnh tranh.
+              </p>
+
+              <p>
+                Với nhiều năm hoạt động tại các thị trường nước ngoài, nguồn lực
+                kinh tế của nhà cái VN365s đã được tích lũy vững chắc. Cộng với
+                đó, nhà cái VN365s nổi tiếng trong việc hào phóng với khách hàng
+                của mình nên đó là lý do mà các <span class=" font-bold">khuyến mãi VN365s</span> không chỉ có số
+                lượng lớn mà còn cực kì giá trị. Các chương trình khuyến mãi,
+                tặng thưởng và dịch vụ chăm sóc khách hàng luôn được đầu tư hết
+                mực để mang đến trải nghiệm tốt nhất cho người chơi.
+              </p>
+
+              <p>
+                Nếu bạn là một người đã có chơi cá cược lâu năm hay là những
+                người chơi mới mà muốn được nhận được nhiều phần thưởng hấp dẫn
+                thì VN365s chính là nhà cái dành cho bạn. Đến với nhà cái, bạn sẽ
+                được nhận các <span class=" font-bold">khuyến mãi VN365s</span> đặc biệt chất lượng với giá trị
+                khủng so với các nhà cái khác trên thị trường.
+              </p>
+
+              <div class="space-y-5">
+                <!-- img1 -->
+                <div
+                  class="flex flex-col justify-center items-center p-1 md:p-2 lg:p-3 w-full lg:w-11/12 mx-auto border"
+                >
+                  <div class="w-full">
+                    <img
+                      class="w-full"
+                      src="./Images/khuyen/1.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <p class="w-full text-center pt-2">
+                    Nhà cái VN365s có các gói khuyến mãi có giá trị cực lớn so
+                    với thị trường mà người chơi không thể nào bỏ qua
+                  </p>
+                </div>
+
+                <div class="space-y-5">
+                  <h1 class="text-2xl font-bold">
+                    Nhận <span class=" font-bold">khuyến mãi VN365s</span> có khó hay không?
+                  </h1>
+                  <p>
+                    Các câu hỏi về chính sách khuyến mại của một nhà cái luôn là
+                    các câu hỏi thường gặp. Bên cạnh giá trị của phần thưởng lớn
+                    hay nhỏ thì cách thức để được nhận phần quà đó khó hay dễ
+                    cũng là một câu hỏi thường xuyên được nhiều người chơi quan
+                    tâm. Bởi mặc dù phần thưởng có giá trị lớn đi chăng nữa mà
+                    khó để đạt thưởng thì cũng sẽ thật vô nghĩa đối với người
+                    chơi.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2 -->
+            <div class="space-y-8">
+              <p>
+                Đối với VN365s, như người chơi đã biết, nhà cái không chỉ hào
+                phóng với khách hàng của mình mà còn có kinh tế vững chắc. Chính
+                vì thế, các gói quà ưu đãi, khuyến mãi được phát ra là để dành
+                tặng cho nhiều người chơi nhất và không có bất kỳ yêu cầu khó
+                khăn nào. Người chơi chỉ cần tham gia nhà cái là sẽ được nhận
+                ngay các <span class=" font-bold">khuyến mãi VN365s</span> cực kì giá trị mà không cần tốn nhiều
+                công sức.
+              </p>
+
+              <p>
+                Cách thức để được nhận thưởng tại nhà cái VN365s sẽ tùy thuộc
+                theo chương trình khuyến mại của phần quà đó. Nhà cái có rất
+                nhiều chương trình khuyến mãi khác nhau, mỗi chương trình sẽ có
+                các yêu cầu để nhận thưởng khác nhau nhưng nhìn chung đều là các
+                yêu cầu đơn giản, dễ dàng thực hiện.
+              </p>
+
+
+              <div class="space-y-5">
+                <p>
+                  Một số chương trình chỉ cần người chơi đăng nhập hay thực hiện
+                  giao dịch nạp tiền là đã được nhận ngay. Nhưng bên cạnh đó
+                  cũng sẽ có một vài chương trình khuyến mãi đòi hỏi người chơi
+                  phải tham gia cá cược nhiều để nhận thưởng. Tất nhiên là phần
+                  quà mà càng khó để nhận thì giá trị sẽ càng lớn hơn rồi. Bạn
+                  có thể theo dõi các chương trình khuyến mãi chi tiết và yêu
+                  cầu để nhận thưởng trong phần sau bài viết.
+                </p>
+                <!-- img2 -->
+                <div
+                  class="flex flex-col justify-center items-center p-1 md:p-2 lg:p-3 w-full lg:w-11/12 mx-auto border"
+                >
+                  <div class="w-full">
+                    <img
+                      class="w-full"
+                      src="./Images/khuyen/2.jpg"
+
+                      alt=""
+                    />
+                  </div>
+                  <p class="w-full text-center pt-2">
+                    Khuyến mãi cực dễ được nhận thưởng chỉ có tại nhà cái VN365s
+                  </p>
+                </div>
+
+                <div class="space-y-5">
+                  <h1 class="text-2xl font-bold">
+                    Các gói <span class=" font-bold">khuyến mãi VN365s</span> và điều kiện để được nhận
+                  </h1>
+                  <p>
+                    Các <span class=" font-bold">khuyến mãi VN365s</span> vô cùng đa dạng về cả giá trị lẫn cách
+                    thức để nhận thưởng. Nhà cái VN365s đã xây dựng nhiều chương
+                    trình và các gói ưu đãi, khuyến mãi khác nhau để đáp ứng nhu
+                    cầu lớn của người chơi. Các chương trình khuyến mãi đều có
+                    thời hạn tương đối, quanh năm không lúc nào thiếu nên người
+                    chơi sẽ không cần phải săn thưởng hay lo lắng là sẽ bị lỡ
+                    các ưu đãi, tặng thưởng.
+                  </p>
+                </div>
+              </div>
+
+          
+
+        
+            </div>
+
+            <!-- 3 -->
+            <div class="space-y-8">
+              <!-- h1+p -->
+              <div class="space-y-5">
+                <h1 class="text-xl font-bold">
+                  Gói khuyến mãi dịp lễ, sự kiện
+                </h1>
+                <p>
+                  Các gói sự kiện, dịp lễ là các gói khuyến mãi mà không phải
+                  nhà cái nào cũng có. Nhưng tại VN365s, dịp lễ tết hay sự kiện
+                  lớn nào cũng đều sẽ có các chương trình khuyến mãi dành tặng
+                  cho người chơi. Các chương trình <span class=" font-bold">khuyến mãi VN365s</span> dịp lễ, sự
+                  kiện thường có thời lượng khá ngắn, tùy theo dịp lễ ngắn hay
+                  dài mà thời hạn của chương trình cũng chỉ dài hơn khoảng từ 1
+                  đến 2 tuần. Tuy nhiên lại có các ưu điểm khác như:
+                </p>
+              </div>
+
+              <div class="space-y-5">
+                <ul class="list-disc pl-8 space-y-1">
+                  <li>
+                    Giá trị vô cùng to lớn: Phần thưởng của các chương trình này
+                    có thể lên tới hàng tỷ đồng, đủ để chứng minh tiềm lực kinh
+                    tế của nhà cái khủng đến nhường nào.
+                  </li>
+                  <li>
+                    Có các chương trình khuyến mãi phụ trước tiền sự kiện, dịp
+                    lễ với giá trị cũng lớn không kém chương trình chính.
+                  </li>
+                  <li>
+                    Dễ dàng đáp ứng yêu cầu nhận: Các chương trình khuyến mãi
+                    dịp lễ và sự kiện thường có yêu cầu nhận thưởng đơn giản như
+                    nạp tiền trong khoảng thời gian sự kiện, dịp lễ diễn ra.
+                  </li>
+                </ul>
+                <p>
+                  Ngoài ra, đối với một vài dịp lễ tết, sự kiện lớn như mừng năm
+                  mới, nhà cái cũng sắp xếp các trò chơi nhận thưởng cực hấp
+                  dẫn. Người chơi vừa có thể tham gia chơi vui vẻ mà vừa có cơ
+                  hội nhận các phần quà giá trị.
+                </p>
+              </div>
+
+              <div class="space-y-5">
+                <!-- img3 -->
+                <div
+                  class="flex flex-col justify-center items-center p-1 md:p-2 lg:p-3 w-full lg:w-11/12 mx-auto border"
+                >
+                  <div class="w-full">
+                    <img
+                      class="w-full"
+                      src="./Images/khuyen/3.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <p class="w-full text-center pt-2">
+                    Phần thưởng dịp lễ tết hay sự kiện là điều thường thấy trong
+                    các chương trình tặng thưởng của VN365s
+                  </p>
+                </div>
+                <!-- h1+p -->
+                <div class="space-y-5">
+                  <h1 class="text-xl font-bold">
+                    <span class=" font-bold">Khuyến mãi VN365s</span> cho các lần nạp tiền
+                  </h1>
+                  <p>
+                    Đây là chương trình khuyến mãi mà gần như nhà cái nào cũng
+                    áp dụng dành cho những người chơi mới. Tuy nhiên điểm đặc
+                    biệt của nhà cái VN365s nằm ở giá trị tiền thưởng được nhận
+                    và số lần nạp. Nhiều nhà cái sẽ chỉ cung cấp khuyến mãi cho
+                    lần nạp đầu tiên nhưng <span class=" font-bold">khuyến mãi VN365s</span> có thể được áp dụng
+                    với cả lần nạp thứ hai, thứ ba, theo tuần hay theo tháng.
+                    Chi tiết bao gồm:
+                  </p>
+                </div>
+
+                <div class="list-disc pl-6 space-y-1">
+                  <ul class="pl-8 space-y-1 list-disc">
+                    <li>
+                      Khi người chơi nạp tiền lần đầu, người chơi sẽ được nhận
+                      tiền thưởng lên tới 168% giá trị tiền nạp. Áp dụng đối với
+                      mọi phương thức nạp tiền khác nhau.
+                    </li>
+                    <li>
+                      Đối với các lần nạp tiếp theo, giá trị tiền thưởng thêm sẽ
+                      giảm nhưng vẫn cao gần 100% giá trị tiền nạp.
+                    </li>
+                    <li>
+                      Nếu người chơi nạp thường xuyên trong nhiều ngày, nhiều
+                      tuần, mỗi lần nạp người chơi cũng sẽ được nhận tiền thưởng
+                      thêm tương ứng với số tiền nạp.
+                    </li>
+                  </ul>
+                  <p>
+                    Có thể nói tại nhà cái VN365s, bạn càng nạp nhiều tiền thì
+                    tiền thưởng bạn được nhận cũng càng lớn. Chương trình khuyến
+                    mãi cho nạp tiền là chương trình kéo dài quanh năm nên người
+                    chơi có thể nhận bất cứ lúc nào
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 4 -->
+            <div class="space-y-8">
+              <!-- img4 -->
+              <div
+                class="flex flex-col justify-center items-center p-1 md:p-2 lg:p-3 w-full lg:w-11/12 mx-auto border"
+              >
+                <div class="w-full">
+                  <img
+                    class="w-full"
+                    src="./Images/khuyen/4.jpg"
+                    alt=""
+                  />
+                </div>
+                <p class="w-full text-center pt-2">
+                  Người chơi mới khi tham gia nạp tiền lần đầu tại nhà cái VN365s
+                  sẽ được nhận khuyến mãi siêu khủng ứng với số tiền mình nạp
+                </p>
+              </div>
+              <div class="flex items-center space-x-5 text-lg">
+                <p class="h-10 border-2 border-gray-300"></p>
+                <p>
+                  <span class="font-bold"> =>> Xem thêm:</span>
+                  <span
+                    class="font-bold text-blue-400 cursor-pointer hover:text-blue-500 transition-all duration-200"
+                  >
+                    Hướng dẫn nạp tiền vào nhà cái VN365s vô cùng đơn giản nhanh
+                    chóng và tiện lợi, uy tín 100%</span
+                  >
+                </p>
+              </div>
+
+              <!-- h1+p -->
+              <div class="space-y-5">
+                <h1 class="text-xl font-bold">
+                  <span class=" font-bold">Khuyến mãi VN365s</span> cho người chơi VIP
+                </h1>
+                <p>
+                  Nhà cái VN365s cũng đặc biệt dành sự quan tâm cho những người
+                  chơi thường xuyên, và có số lần tham gia cá cược cao tại nhà
+                  cái. Những người có số lần đặt cược trong một tuần với số tiền
+                  cược đạt đến một con số nhất định sẽ được nâng cấp thành người
+                  chơi VIP.
+                </p>
+              </div>
+
+              <p>
+                Người chơi VIP không những được nhận các <span class=" font-bold">khuyến mãi VN365s</span> như
+                trên mà còn được hưởng các khuyến mãi đặc biệt khác. Những
+                khuyến mãi như hoàn trả tiền cược với lãi suất cao hay được tham
+                gia đặt cược với tỷ lệ trả thưởng đặc biệt có sức hấp dẫn không
+                thể chối từ.
+              </p>
+
+              <!-- img5 -->
+              <div
+                class="flex flex-col justify-center items-center p-1 md:p-2 lg:p-3 w-full lg:w-11/12 mx-auto border"
+              >
+                <div class="w-full">
+                  <img
+                    class="w-full"
+                    src="./Images/khuyen/5.jpg"
+                    alt=""
+                  />
+                </div>
+                <p class="w-full text-center pt-2">
+                  Với <span class=" font-bold">khuyến mãi VN365s</span>, người chơi càng cược nhiều lần, cược
+                  nhiều tiền thì sẽ càng lãi
+                </p>
+              </div>
+
+              <p>
+                Mọi thông tin về <span class=" font-bold">khuyến mãi VN365s</span> mà người chơi cần biết đã được
+                chúng tôi giới thiệu chi tiết qua bài viết ngày hôm nay. Với giá
+                trị phần thưởng, ưu đãi hấp dẫn như vậy thì người chơi chắc chắn
+                không nên bỏ qua nhà cái VN365s.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-full lg:w-[32%] space-y-5">
+          <div class="flex items-center w-full">
+            <div class="w-[40%] border-2 border-red-600"></div>
+            <div class="w-[60%] border-2 border-gray-200"></div>
+          </div>
+
+          <div>
+            <a
+              class="flex space-x-3 pr-1"
+              href="./cach-chia-bai-ba-cay-diem-cao.html"
+            >
+              <div class="w-[20%] md:w-[10%] lg:w-[20%] xl:w-[20%]">
+                <img
+                  class="w-full"
+                  src="./Images/iconCards/iconcard1.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="w-[80%] md:w-[70%] lg:w-[80%] xl:w-[80%] space-y-1">
+                <h1
+                  class="text-sm md:text-base lg:text-sm xl:text-base font-bold"
+                >
+                  Bật mí các cách chia bài ba cây điểm cao dành cho người chơi
+                  mới
+                </h1>
+                <div class="text-xs md:text-sm lg:text-xs xl:text-sm">
+                  <span> <ion-icon name="time-outline"></ion-icon> </span>
+                  <span> 10:14:SÁNG </span>
+                  <span class="pl-1">
+                    <ion-icon name="calendar-outline"></ion-icon>
+                  </span>
+                  <span> 17 THÁNG SÁU 2022 </span>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div>
+            <a
+              class="flex space-x-3 pr-1"
+              href="./cach-danh-dau-duoi-mien-bac.html"
+            >
+              <div class="w-[20%] md:w-[10%] lg:w-[20%] xl:w-[20%]">
+                <img
+                  class="w-full"
+                  src="./Images/iconCards/iconcard2.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="w-[80%] md:w-[70%] lg:w-[80%] xl:w-[80%] space-y-1">
+                <h1
+                  class="text-sm md:text-base lg:text-sm xl:text-base font-bold"
+                >
+                  Đầu đuôi miền Bắc là gì và có những cách đánh đầu đuôi miền
+                  Bắc nào?
+                </h1>
+                <div class="text-xs md:text-sm lg:text-xs xl:text-sm">
+                  <span> <ion-icon name="time-outline"></ion-icon> </span>
+                  <span> 10:43:CHIỀU </span>
+                  <span class="pl-1">
+                    <ion-icon name="calendar-outline"></ion-icon>
+                  </span>
+                  <span> 15 THÁNG SÁU 2022 </span>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div>
+            <a
+              class="flex space-x-3 pr-1"
+              href="./nhung-luu-y-khi-choi-bai-mau-binh-can-ghi-nho.html"
+            >
+              <div class="w-[20%] md:w-[10%] lg:w-[20%] xl:w-[20%]">
+                <img
+                  class="w-full"
+                  src="./Images/iconCards/iconcard3.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="space-y-1 w-[80%] md:w-[70%] lg:w-[80%] xl:w-[80%]">
+                <h1
+                  class="text-sm md:text-base lg:text-sm xl:text-base font-bold"
+                >
+                  Những lưu ý khi chơi bài mậu binh cần ghi nhớ
+                </h1>
+                <div class="text-xs md:text-sm lg:text-xs xl:text-sm">
+                  <span> <ion-icon name="time-outline"></ion-icon> </span>
+                  <span> 10:38:CHIỀU </span>
+                  <span class="pl-1">
+                    <ion-icon name="calendar-outline"></ion-icon>
+                  </span>
+                  <span> 15 THÁNG SÁU 2022 </span>
+                </div>
+              </div></a
+            >
+          </div>
+
+          <div>
+            <a
+              class="flex space-x-3 pr-1"
+              href="./cach-bat-keo-trong-bong-da.html"
+            >
+              <div class="w-[20%] md:w-[10%] lg:w-[20%] xl:w-[20%]">
+                <img
+                  class="w-full"
+                  src="./Images/iconCards/iconcard4.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="space-y-1 w-[80%] md:w-[70%] lg:w-[80%] xl:w-[80%]">
+                <h1
+                  class="text-sm md:text-base lg:text-sm xl:text-base font-bold"
+                >
+                  Cách bắt kèo trong bóng đá tại nhà cái uy tín VN365s
+                </h1>
+                <div class="text-xs md:text-sm lg:text-xs xl:text-sm">
+                  <span> <ion-icon name="time-outline"></ion-icon> </span>
+                  <span> 10:33:CHIỀU </span>
+                  <span class="pl-1">
+                    <ion-icon name="calendar-outline"></ion-icon>
+                  </span>
+                  <span> 15 THÁNG SÁU 2022 </span>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- <div class="flex space-x-3 pr-1">
+            <div>
+              <img
+                class="w-[130px] md:w-[70px] lg:w-52 xl:w-32"
+                src="./Images/iconCards/iconcard5.jpg"
+                alt=""
+              />
+            </div>
+            <div class="space-y-1">
+              <h1
+                class="text-sm md:text-base lg:text-sm xl:text-base font-bold"
+              >
+                Bật mí các cách chia bài ba cây điểm cao dành cho người chơi mới
+              </h1>
+              <div class="text-xs md:text-sm lg:text-xs xl:text-sm">
+                <span> <ion-icon name="time-outline"></ion-icon> </span>
+                <span> 10:14:SÁNG </span>
+                <span>
+                  <ion-icon name="calendar-outline"></ion-icon>
+                </span>
+                <span> 17 THÁNG SÁU 2022 </span>
+              </div>
+            </div>
+          </div> -->
+
+          <!-- <div class="flex space-x-3 pr-1">
+            <div>
+              <img
+                class="w-[130px] md:w-[70px] lg:w-52 xl:w-32"
+                src="./Images/iconCards/iconcard6.jpg"
+                alt=""
+              />
+            </div>
+            <div class="space-y-1">
+              <h1
+                class="text-sm md:text-base lg:text-sm xl:text-base font-bold"
+              >
+                Bật mí các cách chia bài ba cây điểm cao dành cho người chơi mới
+              </h1>
+              <div class="text-xs md:text-sm lg:text-xs xl:text-sm">
+                <span> <ion-icon name="time-outline"></ion-icon> </span>
+                <span> 10:14:SÁNG </span>
+                <span>
+                  <ion-icon name="calendar-outline"></ion-icon>
+                </span>
+                <span> 17 THÁNG SÁU 2022 </span>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+
+     <!-- footer -->
+     <div
+     class="grid md:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-8 lg:gap-10 bg-[#191919] px-6 py-20 font-semibold"
+   >
+     <div class="flex justify-center items-center lg:items-start">
+       <img
+         class="h-[70px] lg:h-14 xl:h-20"
+         src="./Images/logo-d9bet-biz.png"
+         alt=""
+       />
+     </div>
+     <div class="lg:space-y-5 space-y-3">
+       <div class="border-b border-gray-200 text-white pb-2">
+         <h1 class="font-bold text-lg lg:text-xl 2xl:text-2xl">CÁ CƯỢC</h1>
+       </div>
+       <div
+         class="lg:text-base text-sm text-gray-400 space-y-1 lg:space-y-2 xl:space-y-3"
+       >
+         <p>Thể Thao</p>
+         <p>Đá Gà</p>
+         <p>Casino Trực Tuyến</p>
+       </div>
+     </div>
+     <div class="lg:space-y-5 space-y-3">
+       <div class="border-b border-gray-200 text-white pb-2">
+         <h1 class="font-bold text-lg lg:text-xl 2xl:text-2xl">HƯỚNG DẪN</h1>
+       </div>
+       <div
+         class="lg:text-base text-sm text-gray-400 space-y-1 lg:space-y-2 xl:space-y-3"
+       >
+         <p class=" hover:text-white transition-all duration-100"><a href="./dang-ky.html">Đăng Ký VN365s</a></p>
+         <p class=" hover:text-white transition-all duration-100"><a href="./nap-tien.html">Nạp Tiền VN365s</a></p>
+         <p class=" hover:text-white transition-all duration-100"><a href="./rut-tien.html">Rút Tiền VN365s</a></p>
+         <p class=" hover:text-white transition-all duration-100"><a href="./khuyen-mai.html">Khuyến Mãi VN365s</a></p>
+       </div>
+     </div>
+
+     <div class="space-y-3 xl:space-y-5 text-white">
+       <div class="border-b border-gray-200 text-white pb-2">
+         <h1 class="font-bold text-lg lg:text-xl 2xl:text-2xl">LIÊN HỆ</h1>
+       </div>
+       <p class="lg:text-base text-sm">
+         32t8 Âu Dương Lân, Phường 3, Quận 8, Thành phố Hồ Chí Minh
+       </p>
+       <p class="lg:text-base text-sm">0969581241</p>
+
+       <p>https://vn365s.xyz/</p>
+     </div>
+   </div>
+      <div
+        class="bg-[#0D0F26] px-6 py-8 space-y-2 md:space-y-0 md:flex justify-between items-center text-gray-200"
+      >
+        <p class="lg:text-base text-sm text-center">© Copyright by vn365s.xyz</p>
+        <div class="flex justify-center items-center">
+          <div class="flex items-center space-x-2 md:space-x-4">
+            <p class="lg:text-base text-xs md:text-sm">
+              Giới Thiệu | Chính Sách Bảo Mật | Liên Hệ
+            </p>
+            <ion-icon
+              name="chevron-up-outline"
+              class="text-2xl lg:text-3xl"
+            ></ion-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

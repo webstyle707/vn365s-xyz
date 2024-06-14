@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>cach-danh-dau-duoi-mien-bac</title>
+  </head>
+  <body class="bg-[#EFEFEF]">
+    <div class="bg-[#FFFFFF] mx-auto max-w-[1465px] border px-[18px]">
+      <!-- side nav -->
+      <div
+        class="hideandshow h-screen w-[65%] md:w-[40%] lg:hidden fixed top-0 bg-gray-200 bg-opacity-95 z-20"
+      >
+        <div class="w-full h-full space-y-6">
+          <div class="absolute top-4 right-3 text-2xl text-gray-600">
+            <ion-icon onclick="hideSideNav()" name="close-outline"></ion-icon>
+          </div>
+          <div class="px-3 pt-8">
+            <img class="w-40" src="./Images/logo-d9bet-biz.png" alt="" />
+          </div>
+          <div
+            class="w-full h-full flex flex-col space-y-4 *:pb-2 *:border-b *:border-gray-400 *:pl-3 text-sm px-px *:hover:border-[#FF5200]"
+          >
+            <a href="./index.html"> TRANG CHỦ </a>
+            <a href="./dang-ky.html"> ĐĂNG KÝ </a>
+            <a href="./nap-tien.html"> NẠP TIỀN </a>
+            <a href="./rut-tien.html"> RÚT TIỀN </a>
+            <a href="./khuyen-mai.html"> KHUYẾN MÃI </a>
+            <a href="./thu-thuat-ca-cuoc.html"> THỦ THUẬT CÁ CƯỢC </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Header -->
+      <div>
+        <!-- header -->
+        <div class="w-full bg-[#161616] lg:block hidden">
+          <div class="flex justify-between items-center px-[20px] py-3">
+            <div>
+              <img class="h-[100px]" src="./Images/logo-d9bet-biz.png" alt="" />
+            </div>
+            <div class="flex items-center space-x-3 text-white">
+              <a href="https://www.hay88.one/?inviteCode=1751262">
+                <button
+                  class="bg-[#009FE3] hover:bg-[#007FB6] transition-all duration-200 font-bold py-[10px] px-6 rounded-full"
+                >
+                  ĐĂNG NHẬP
+                </button>
+              </a>
+              <a href="https://www.hay88.one/?inviteCode=1751262">
+                <button
+                  class="bg-[#FF5200] hover:bg-[#CC4200] transition-all duration-200 font-bold py-[10px] px-10 rounded-full"
+                >
+                  ĐĂNG KÝ
+                </button>
+              </a>
+            </div>
+          </div>
+          <div
+            class="flex items-center font-semibold text-white *:px-6 *:py-5 border-t border-[#FF5200]"
+          >
+            <a
+              class="transition-all duration-300 hover:bg-[#FF5200]"
+              href="./index.html"
+              >TRANG CHỦ</a
+            >
+            <a
+              class="transition-all duration-300 hover:bg-[#FF5200]"
+              href="./dang-ky.html"
+              >ĐĂNG KÝ</a
+            >
+            <a
+              class="transition-all duration-300 hover:bg-[#FF5200]"
+              href="./nap-tien.html"
+              >NẠP TIỀN</a
+            >
+            <a
+              class="transition-all duration-300 hover:bg-[#FF5200]"
+              href="./rut-tien.html"
+              >RÚT TIỀN</a
+            >
+            <a
+              class="transition-all duration-300 hover:bg-[#FF5200]"
+              href="./khuyen-mai.html"
+              >KHUYẾN MÃI</a
+            >
+            <a class="bg-[#FF5200]" href="./thu-thuat-ca-cuoc.html"
+              >THỦ THUẬT CÁ CƯỢC</a
+            >
+          </div>
+        </div>
+
+        <!-- sm header -->
+        <div class="w-full bg-[#161616] lg:hidden block">
+          <div class="flex justify-center items-center py-4">
+            <img src="./Images/logo-d9bet-biz.png" alt="" />
+          </div>
+          <div class="py-4 border-t border-[#FF5200]">
+            <div class="justify-between flex items-center px-2 md:px-5">
+              <div onclick="showSideNav()" class="text-3xl text-white">
+                <ion-icon name="menu-outline"></ion-icon>
+              </div>
+              <div class="flex items-center md:space-x-3 space-x-2 text-white">
+                <a href="https://www.hay88.one/?inviteCode=1751262">
+                  <button
+                    class="bg-[#009FE3] hover:bg-[#007FB6] transition-all duration-200 font-bold text-xs md:text-base pb-[6px] pt-[8px] px-4 md:px-6 rounded-full"
+                  >
+                    ĐĂNG NHẬP
+                  </button>
+                </a>
+                <a href="https://www.hay88.one/?inviteCode=1751262">
+                  <button
+                    class="bg-[#FF5200] hover:bg-[#CC4200] transition-all duration-200 font-bold text-xs md:text-base pb-[6px] pt-[8px] px-6 md:px-10 rounded-full"
+                  >
+                    ĐĂNG KÝ
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- container -->
+      <div
+        class="w-full lg:flex space-y-8 lg:space-y-0 lg:space-x-3 xl:space-x-8 py-8"
+      >
+        <div class="w-full lg:w-[68%] space-y-8">
+          <div class="space-y-8">
+            <div>
+              <p class="text-lg">
+                <span class="text-blue-400"
+                  ><a href="./index.html">Trang chủ</a></span
+                >
+                \
+                <span class="text-blue-400"
+                  ><a href="./thu-thuat-ca-cuoc.html"
+                    >Thủ Thuật Cá Cược</a
+                  ></span
+                >
+                \ Đầu đuôi miền Bắc là gì và có những cách đánh đầu đuôi miền
+                Bắc nào? mới
+              </p>
+            </div>
+          </div>
+          <div class="w-full space-y-8 border border-gray-100 pb-10">
+            <!-- 1 -->
+            <div class="space-y-6">
+              <div class="">
+                <img
+                  class="w-full"
+                  src="/Images/cach-danh-dau-duoi/1.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="space-y-6 px-4 pb-10">
+                <div class="space-y-4">
+                  <h1 class="text-3xl font-bold">
+                    Đầu đuôi miền Bắc là gì và có những cách đánh đầu đuôi miền
+                    Bắc nào?
+                  </h1>
+                  <p class="text-sm space-x-1 text-gray-400 font-semibold">
+                    <span><ion-icon name="pencil-outline"> </ion-icon></span>
+                    <span> VN365s XYZ </span>
+                    <span><ion-icon name="time-outline"></ion-icon></span>
+                    <span> 15 THÁNG SÁU 2022 </span>
+                    <span>
+                      <ion-icon name="folder-open-outline"> </ion-icon></span
+                    ><span> THỦ THUẬT CÁ CƯỢC</span>
+                  </p>
+                </div>
+
+                <p>
+                  Từ lâu, xổ số và lô đề đã phát triển và tồn tại trong một thời
+                  gian dài, trở thành một trò chơi quen thuộc và phổ biến với
+                  nhiều lứa tuổi khác nhau. Ngày nay, cùng với sự phát triển của
+                  khoa học kỹ thuật công nghệ và kinh tế xã hội, các nhà cái và
+                  hình thức chơi game trực tuyến lần lượt ra đời và trở nên phổ
+                  biến, ngày càng thu hút nhiều sự tham gia của người chơi. Xổ
+                  số và lô đề cũng xuất hiện trong này. Vậy có những
+                  <span class=" font-bold text-blue-400"> cách đánh đầu đuôi miền Bắc </span> nào?
+                </p>
+              </div>
+            </div>
+
+            <!-- 2 -->
+            <div class="space-y-8 px-4">
+              <div class="space-y-5">
+                <h1 class="font-bold text-2xl">Tổng quan về nhà cái VN365s</h1>
+                <!-- img2 -->
+                <div
+                  class="flex flex-col justify-center items-center p-1 md:p-2 lg:p-3 w-full lg:w-11/12 mx-auto border"
+                >
+                  <div class="w-full">
+                    <img
+                      class="w-full"
+                      src="./Images/cach-danh-dau-duoi/2.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <p class="w-full text-center pt-2">
+                    Tổng quan về nhà cái VN365s
+                  </p>
+                </div>
+                <p>
+                  Hiện nay, đối với những người chơi lâu năm đã quen thuộc với
+                  thị trường giải trí cá cược trực tuyến, cái tên VN365s đã không
+                  còn xa lạ. Nhờ có sự uy tín, an toàn, độ bảo mật cao cùng chất
+                  lượng mà các dịch vụ VN365s cung cấp mà nhà cái này lần lượt
+                  giành được sự quan tâm và tham gia của nhiều người chơi ở Việt
+                  Nam nói chung và thế giới nói riêng, vươn lên trở thành vị trí
+                  hàng đầu trên thị trường nhà cái cá cược trực tuyến.
+                </p>
+              </div>
+              <p>
+                Ngay từ khi thành lập và phát triển cho đến thời gian hiện nay,
+                nhà cái VN365s đã không ngừng đầu tư và cập nhật, nâng cấp các hệ
+                thống bảo mật và liên tục mở rộng phạm vi hoạt động, hợp tác với
+                nhiều nhà cung cấp và phát hành game trên thế giới để có thể
+                mang đến cho người chơi một sân chơi an toàn, uy tín và chất
+                lượng cùng với các chính sách bảo mật thông tin tốt, đỉnh cao
+                trong thị trường nhà cái giải trí cá cược hiện nay.
+              </p>
+            </div>
+
+            <!-- 3 -->
+            <div class="space-y-8 px-4">
+              <div class="space-y-5">
+                <h1 class="font-bold text-2xl">
+                  Người chơi đánh giá như thế nào về nhà cái VN365s?
+                </h1>
+                <!-- img3 -->
+                <div
+                  class="flex flex-col justify-center items-center p-1 md:p-2 lg:p-3 w-full lg:w-11/12 mx-auto border"
+                >
+                  <div class="w-full">
+                    <img
+                      class="w-full"
+                      src="./Images/cach-danh-dau-duoi/3.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <p class="w-full text-center pt-2">
+                    Người chơi đánh giá về VN365s
+                  </p>
+                </div>
+                <p>
+                  Để một nhà cái có thể vươn lên và trở thành nhà cái số 1 trên
+                  thị trường hiện nay cũng như sở hữu lượng người tham gia khủng
+                  thì VN365s đã không ngừng nỗ lực, cố gắng và những lời nhận
+                  xét, đánh giá của người chơi cũng như các chuyên gia cá cược
+                  trong ngành là một trong những yếu tố quyết định góp phần tạo
+                  nên sự thành công của nhà cái như ngày hôm nay. Cùng bài viết
+                  dưới đây xem VN365s được người chơi nhận xét và đánh giá như
+                  thế nào?
+                </p>
+              </div>
+
+              <div class="space-y-5">
+                <h1 class="font-bold text-xl">
+                  Thiết kế giao diện đẹp mắt, ấn tượng
+                </h1>
+                <p>
+                  Trải nghiệm người dùng là một trong những điều nhận được sự
+                  quan tâm hàng đầu của nhà cái VN365s. Để người chơi có thể thỏa
+                  mái tham gia trải nghiệm chơi game tại đây mà không gặp bất kỳ
+                  một vấn đề nào là cả một sự nỗ lực của tập thể nhà cái. Giao
+                  diện là một trong những phương tiện giao tiếp gián tiếp của
+                  nhà cái với người chơi nên luôn được nhà cái quan tâm và đầu
+                  tư một cách chỉn chu, hoàn hảo nhất.
+                </p>
+              </div>
+
+              <p>
+                Sở hữu một màu xanh làm tông màu chính tạo nên cảm giác mát mắt,
+                thỏa mái cho người chơi, giúp người chơi có cảm giác dễ chịu khi
+                nhìn vào màn hình giao diện trong một thời gian dài. Ngoài ra,
+                mặc dù sở hữu rất nhiều trò chơi và dịch vụ khác nhau nhưng các
+                dịch vụ này luôn được sắp xếp theo một trật tự nhất định, logic,
+                do đó người chơi có thể dễ dàng quan sát và tìm kiếm ngay từ lần
+                trải nghiệm chơi game đầu tiên tại nhà cái VN365s.
+              </p>
+
+              <div class="space-y-5">
+                <div class="flex items-center space-x-5 text-lg">
+                  <p class="h-10 border-2 border-gray-300"></p>
+                  <p>
+                    <span class="font-bold"> =>> Xem thêm:</span>
+                    <span
+                      class="font-bold text-blue-400 cursor-pointer hover:text-blue-500 transition-all duration-200"
+                    >
+                      Kinh nghiệm chơi sicbo luôn thắng, ăn lãi 100% từ các tay
+                      chơi cao thủ</span
+                    >
+                  </p>
+                </div>
+
+                <h1 class="font-bold text-2xl">
+                  Cung cấp ứng dụng trên điện thoại di động
+                </h1>
+
+                <p>
+                  Không phải người chơi nào cũng có điều kiện hoặc sở hữu cho
+                  mình một dàn máy tính khủng với chất lượng tốt để chơi game.
+                  Thấu hiểu được điều này nên nhà cái VN365s đã nghiên cứu và
+                  cung cấp ứng dụng VN365s trên thiết bị điện thoại di động. Chỉ
+                  cần truy cập ứng dụng Ch Play với điện thoại sử dụng hệ điều
+                  hành Android hay ứng dụng App Store đối với điện thoại sử dụng
+                  hệ điều hành IOS, tìm kiếm nhà cái VN365s và bấm nút tải về.
+                </p>
+              </div>
+
+              <p>
+                Sau khi tải về thành công, người chơi tiến hành các bước đăng ký
+                tài khoản bằng cách điền đầy đủ và chính xác thông tin nhà cái
+                yêu cầu để tạo tài khoản thành công và tiến hành nạp tiền. Với
+                những thao tác đơn giản như trên, người chơi đã có thể dễ dàng
+                tham gia và truy cập, chơi game tại đây với một chiếc điện thoại
+                có kết nối internet mà không cần phải có máy tính, laptop hay
+                ipad thì mới có thể tham gia.
+              </p>
+            </div>
+
+            <!-- 4 -->
+            <div class="space-y-8 px-4">
+              <div class="space-y-5">
+                <h1 class="font-bold text-xl">Các trò chơi VN365s cung cấp</h1>
+                <!-- img4 -->
+                <div
+                  class="flex flex-col justify-center items-center p-1 md:p-2 lg:p-3 w-full lg:w-11/12 mx-auto border"
+                >
+                  <div class="w-full">
+                    <img
+                      class="w-full"
+                      src="./Images/cach-danh-dau-duoi/4.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <p class="w-full text-center pt-2">
+                    Các trò chơi VN365s cung cấp
+                  </p>
+                </div>
+                <p>
+                  Bên cạnh những ưu điểm chúng tôi vừa đề cập ở trên, một yếu tố
+                  nữa tạo nên sự yêu thích và góp phần tạo nên sự thành công cho
+                  nhà cái là VN365s luôn không ngừng nghiên cứu, cập nhật xu
+                  hướng thị trường, hợp tác với các nhà cung cấp và phát triển
+                  game nổi tiếng trên toàn thế giới để có thể mang đến cho người
+                  chơi những trò chơi chất lượng, những trải nghiệm hấp dẫn và
+                  đa dạng nhất. Cùng điểm danh một số trò chơi ở VN365s cung cấp
+                  tại đây:
+                </p>
+              </div>
+
+              <div class="space-y-5">
+                <h1 class="font-bold text-xl">Cá cược thể thao trực tuyến</h1>
+                <p>
+                  Nhằm đáp ứng nhu cầu ngày càng cao của người chơi và để có thể
+                  có vị thế trong thị trường nhà cái cá cược có sự cạnh tranh
+                  gay gắt như hiện nay, nhà cái VN365s đã không ngừng nỗ lực và
+                  cố gắng, phát triển các bộ môn thể thao. Khi tham gia chơi cá
+                  cược thể thao trực tuyến tại VN365s, người chơi có thể trải
+                  nghiệm rất nhiều loại kèo đến từ nhiều nhà phát hành khác nhau
+                  với các tỷ lệ cá cược hấp dẫn.
+                </p>
+              </div>
+              <div class="space-y-5">
+                <h1 class="font-bold text-xl">Xổ số VN365s</h1>
+                <p>
+                  VN365s quả là một nhà cái hoàn hảo nếu người chơi có niềm đam
+                  mê với xổ số, lô đề. Nắm bắt được các nhu cầu tâm lý này nên
+                  nhà cái VN365s đã tập trung phát triển và tạo nên nhiều kèo cá
+                  cược với các tỷ lệ kèo hấp dẫn, giúp người chơi có thể vừa thư
+                  giãn giải trí, vừa có thể sử dụng làm công cụ kinh doanh. Tại
+                  VN365s cung cấp cho người chơi nhiều hình thức chơi khác nhau
+                  như Vietlott, Keno & Lotto,… và còn nhiều hình thức chơi hấp
+                  dẫn khác.
+                </p>
+              </div>
+            </div>
+            <!-- 5 -->
+            <div class="space-y-8 px-4">
+              <div class="space-y-5">
+                <h1 class="font-bold text-xl">
+                  Có những cách đánh đầu đuôi miền Bắc nào?
+                </h1>
+                <!-- img5 -->
+                <div
+                  class="flex flex-col justify-center items-center p-1 md:p-2 lg:p-3 w-full lg:w-11/12 mx-auto border"
+                >
+                  <div class="w-full">
+                    <img
+                      class="w-full"
+                      src="./Images/cach-danh-dau-duoi/5.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <p class="w-full text-center pt-2">
+                    Cách đánh đầu đuôi miền Bắc
+                  </p>
+                </div>
+                <p>
+                  Một trong những hình thức đánh đề phổ biến hiện nay, được
+                  nhiều người chơi trong mọi lứa tuổi quan tâm và tham gia là
+                  đánh đề đầu đuôi. Có sự khác nhau ở cách đánh đầu đuôi miền
+                  Bắc và miền Nam, do đó người chơi cần có sự tìm hiểu để có thể
+                  thắng cược và thu được kết quả cao. Do đó, nhiều người chơi đã
+                  đặt ra câu hỏi là làm thế nào để đánh đầu đuôi mang lại kết
+                  quả cao đối với đề miền Bắc, chúng tôi sẽ giải đáp trong phần
+                  sau đây:
+                </p>
+              </div>
+
+              <p>
+                Cách đánh đề đầu đuôi là một trong những phương pháp thịnh hành
+                hiện nay được nhiều người chơi tham khảo và sử dụng. Ở hình thức
+                này, mỗi giải đặc biệt trong bảng kết quả xổ số sẽ có một dãy
+                số, việc của người chơi là phải dự đoán chính xác 2 số đầu hoặc
+                2 số cuối trong bảng này. Một trong những phương pháp được nhiều
+                người chơi sử dụng nhất trong trò chơi này là bắt giải đặc biệt.
+                Cách chơi này được chia làm 2 hình thức:
+              </p>
+
+              <div class="space-y-5">
+                <ul class="list-disc font-bold pl-6">
+                  <li>
+                    Cách 1: Theo quy tắc chạy lô: Công nghệ kỹ thuật ngày càng
+                    phát triển đã hình thành nên nhiều công cụ hiện đại để phục
+                    vụ nhu cầu người chơi. Một trong những công cụ giúp ích cho
+                    người chơi khi tham gia đánh đầu đuôi miền Bắc là các trang
+                    web có tác dụng giúp người chơi phân tích xổ số bằng các
+                    công cụ của mình và cung cấp cho người chơi chức năng soi
+                    cầu lô miễn phí.
+                  </li>
+
+                  <li>
+                    Cách 2: Theo lô rơi: Nếu người chơi đầu đuôi miền Bắc đang
+                    theo hướng chơi soi cầu BTL thì cách theo lô rơi là một
+                    phương pháp phù hợp. Theo nhiều năm kinh nghiệm của các
+                    chuyên gia trong ngành, nếu lô đề đầu tiên có số 9 thì khả
+                    năng rất cao sẽ xuất hiện lô rơi trong lần tiếp theo.
+                  </li>
+                </ul>
+                <div class="flex items-center space-x-5 text-lg">
+                  <p class="h-10 border-2 border-gray-300"></p>
+                  <p>
+                    <span class="font-bold"> =>> Xem thêm:</span>
+                    <span
+                      class="font-bold text-blue-400 cursor-pointer hover:text-blue-500 transition-all duration-200"
+                    >
+                      Cược xiên là gì? Bí quyết cược xiên tại VN365s hiệu quả
+                      nhất năm 2022</span
+                    >
+                  </p>
+                </div>
+
+                <p>
+                  Tìm hiểu về nhà cái VN365s và các <span class=" font-bold"> cách đánh đầu đuôi miền Bắc </span>
+                  là một trong những điều bắt buộc mà người chơi phải làm nếu
+                  muốn tìm cho mình một nhà cái an toàn và uy tín để tham gia
+                  chơi game và giành chiến thắng.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-full lg:w-[32%] space-y-5">
+          <div class="flex items-center w-full">
+            <div class="w-[40%] border-2 border-red-600"></div>
+            <div class="w-[60%] border-2 border-gray-200"></div>
+          </div>
+
+          <div>
+            <a
+              class="flex space-x-3 pr-1"
+              href="./cach-chia-bai-ba-cay-diem-cao.html"
+            >
+              <div class="w-[20%] md:w-[10%] lg:w-[20%] xl:w-[20%]">
+                <img
+                  class="w-full"
+                  src="./Images/iconCards/iconcard1.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="w-[80%] md:w-[70%] lg:w-[80%] xl:w-[80%] space-y-1">
+                <h1
+                  class="text-sm md:text-base lg:text-sm xl:text-base font-bold"
+                >
+                  Bật mí các cách chia bài ba cây điểm cao dành cho người chơi
+                  mới
+                </h1>
+                <div class="text-xs md:text-sm lg:text-xs xl:text-sm">
+                  <span> <ion-icon name="time-outline"></ion-icon> </span>
+                  <span> 10:14:SÁNG </span>
+                  <span class="pl-1">
+                    <ion-icon name="calendar-outline"></ion-icon>
+                  </span>
+                  <span> 17 THÁNG SÁU 2022 </span>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div>
+            <a
+              class="flex space-x-3 pr-1"
+              href="./cach-danh-dau-duoi-mien-bac.html"
+            >
+              <div class="w-[20%] md:w-[10%] lg:w-[20%] xl:w-[20%]">
+                <img
+                  class="w-full"
+                  src="./Images/iconCards/iconcard2.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="w-[80%] md:w-[70%] lg:w-[80%] xl:w-[80%] space-y-1">
+                <h1
+                  class="text-sm md:text-base lg:text-sm xl:text-base font-bold"
+                >
+                  Đầu đuôi miền Bắc là gì và có những cách đánh đầu đuôi miền
+                  Bắc nào?
+                </h1>
+                <div class="text-xs md:text-sm lg:text-xs xl:text-sm">
+                  <span> <ion-icon name="time-outline"></ion-icon> </span>
+                  <span> 10:43:CHIỀU </span>
+                  <span class="pl-1">
+                    <ion-icon name="calendar-outline"></ion-icon>
+                  </span>
+                  <span> 15 THÁNG SÁU 2022 </span>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div>
+            <a
+              class="flex space-x-3 pr-1"
+              href="./nhung-luu-y-khi-choi-bai-mau-binh-can-ghi-nho.html"
+            >
+              <div class="w-[20%] md:w-[10%] lg:w-[20%] xl:w-[20%]">
+                <img
+                  class="w-full"
+                  src="./Images/iconCards/iconcard3.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="space-y-1 w-[80%] md:w-[70%] lg:w-[80%] xl:w-[80%]">
+                <h1
+                  class="text-sm md:text-base lg:text-sm xl:text-base font-bold"
+                >
+                  Những lưu ý khi chơi bài mậu binh cần ghi nhớ
+                </h1>
+                <div class="text-xs md:text-sm lg:text-xs xl:text-sm">
+                  <span> <ion-icon name="time-outline"></ion-icon> </span>
+                  <span> 10:38:CHIỀU </span>
+                  <span class="pl-1">
+                    <ion-icon name="calendar-outline"></ion-icon>
+                  </span>
+                  <span> 15 THÁNG SÁU 2022 </span>
+                </div>
+              </div></a
+            >
+          </div>
+
+          <div>
+            <a
+              class="flex space-x-3 pr-1"
+              href="./cach-bat-keo-trong-bong-da.html"
+            >
+              <div class="w-[20%] md:w-[10%] lg:w-[20%] xl:w-[20%]">
+                <img
+                  class="w-full"
+                  src="./Images/iconCards/iconcard4.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="space-y-1 w-[80%] md:w-[70%] lg:w-[80%] xl:w-[80%]">
+                <h1
+                  class="text-sm md:text-base lg:text-sm xl:text-base font-bold"
+                >
+                  Cách bắt kèo trong bóng đá tại nhà cái uy tín VN365s
+                </h1>
+                <div class="text-xs md:text-sm lg:text-xs xl:text-sm">
+                  <span> <ion-icon name="time-outline"></ion-icon> </span>
+                  <span> 10:33:CHIỀU </span>
+                  <span class="pl-1">
+                    <ion-icon name="calendar-outline"></ion-icon>
+                  </span>
+                  <span> 15 THÁNG SÁU 2022 </span>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- <div class="flex space-x-3 pr-1">
+            <div>
+              <img
+                class="w-[130px] md:w-[70px] lg:w-52 xl:w-32"
+                src="./Images/iconCards/iconcard5.jpg"
+                alt=""
+              />
+            </div>
+            <div class="space-y-1">
+              <h1
+                class="text-sm md:text-base lg:text-sm xl:text-base font-bold"
+              >
+                Bật mí các cách chia bài ba cây điểm cao dành cho người chơi mới
+              </h1>
+              <div class="text-xs md:text-sm lg:text-xs xl:text-sm">
+                <span> <ion-icon name="time-outline"></ion-icon> </span>
+                <span> 10:14:SÁNG </span>
+                <span>
+                  <ion-icon name="calendar-outline"></ion-icon>
+                </span>
+                <span> 17 THÁNG SÁU 2022 </span>
+              </div>
+            </div>
+          </div> -->
+
+          <!-- <div class="flex space-x-3 pr-1">
+            <div>
+              <img
+                class="w-[130px] md:w-[70px] lg:w-52 xl:w-32"
+                src="./Images/iconCards/iconcard6.jpg"
+                alt=""
+              />
+            </div>
+            <div class="space-y-1">
+              <h1
+                class="text-sm md:text-base lg:text-sm xl:text-base font-bold"
+              >
+                Bật mí các cách chia bài ba cây điểm cao dành cho người chơi mới
+              </h1>
+              <div class="text-xs md:text-sm lg:text-xs xl:text-sm">
+                <span> <ion-icon name="time-outline"></ion-icon> </span>
+                <span> 10:14:SÁNG </span>
+                <span>
+                  <ion-icon name="calendar-outline"></ion-icon>
+                </span>
+                <span> 17 THÁNG SÁU 2022 </span>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+
+      <!-- footer -->
+      <div
+        class="grid md:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-8 lg:gap-10 bg-[#191919] px-6 py-20 font-semibold"
+      >
+        <div class="flex justify-center items-center lg:items-start">
+          <img
+            class="h-[70px] lg:h-14 xl:h-20"
+            src="./Images/logo-d9bet-biz.png"
+            alt=""
+          />
+        </div>
+        <div class="lg:space-y-5 space-y-3">
+          <div class="border-b border-gray-200 text-white pb-2">
+            <h1 class="font-bold text-lg lg:text-xl 2xl:text-2xl">CÁ CƯỢC</h1>
+          </div>
+          <div
+            class="lg:text-base text-sm text-gray-400 space-y-1 lg:space-y-2 xl:space-y-3"
+          >
+            <p>Thể Thao</p>
+            <p>Đá Gà</p>
+            <p>Casino Trực Tuyến</p>
+          </div>
+        </div>
+        <div class="lg:space-y-5 space-y-3">
+          <div class="border-b border-gray-200 text-white pb-2">
+            <h1 class="font-bold text-lg lg:text-xl 2xl:text-2xl">HƯỚNG DẪN</h1>
+          </div>
+          <div
+            class="lg:text-base text-sm text-gray-400 space-y-1 lg:space-y-2 xl:space-y-3"
+          >
+            <p class="hover:text-white transition-all duration-100">
+              <a href="./dang-ky.html">Đăng Ký VN365s</a>
+            </p>
+            <p class="hover:text-white transition-all duration-100">
+              <a href="./nap-tien.html">Nạp Tiền VN365s</a>
+            </p>
+            <p class="hover:text-white transition-all duration-100">
+              <a href="./rut-tien.html">Rút Tiền VN365s</a>
+            </p>
+            <p class="hover:text-white transition-all duration-100">
+              <a href="./khuyen-mai.html">Khuyến Mãi VN365s</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="space-y-3 xl:space-y-5 text-white">
+          <div class="border-b border-gray-200 text-white pb-2">
+            <h1 class="font-bold text-lg lg:text-xl 2xl:text-2xl">LIÊN HỆ</h1>
+          </div>
+          <p class="lg:text-base text-sm">
+            32t8 Âu Dương Lân, Phường 3, Quận 8, Thành phố Hồ Chí Minh
+          </p>
+          <p class="lg:text-base text-sm">0969581241</p>
+
+          <p>https://vn365s.xyz/</p>
+        </div>
+      </div>
+      <div
+        class="bg-[#0D0F26] px-6 py-8 space-y-2 md:space-y-0 md:flex justify-between items-center text-gray-200"
+      >
+        <p class="lg:text-base text-sm text-center">© Copyright by vn365s.xyz</p>
+        <div class="flex justify-center items-center">
+          <div class="flex items-center space-x-2 md:space-x-4">
+            <p class="lg:text-base text-xs md:text-sm">
+              Giới Thiệu | Chính Sách Bảo Mật | Liên Hệ
+            </p>
+            <ion-icon
+              name="chevron-up-outline"
+              class="text-2xl lg:text-3xl"
+            ></ion-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

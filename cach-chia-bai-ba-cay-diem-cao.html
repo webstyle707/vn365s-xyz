@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Thủ Thuật Cá Cược - VN365s XYZ</title>
+  </head>
+  <body class="bg-[#EFEFEF]">
+    <div class="bg-[#FFFFFF] mx-auto max-w-[1465px] border px-[18px]">
+      <!-- side nav -->
+      <div
+        class="hideandshow h-screen w-[65%] md:w-[40%] lg:hidden fixed top-0 bg-gray-200 bg-opacity-95 z-20"
+      >
+        <div class="w-full h-full space-y-6">
+          <div class="absolute top-4 right-3 text-2xl text-gray-600">
+            <ion-icon onclick="hideSideNav()" name="close-outline"></ion-icon>
+          </div>
+          <div class="px-3 pt-8">
+            <img class="w-40" src="./Images/logo-d9bet-biz.png" alt="" />
+          </div>
+          <div
+            class="w-full h-full flex flex-col space-y-4 *:pb-2 *:border-b *:border-gray-400 *:pl-3 text-sm px-px *:hover:border-[#FF5200]"
+          >
+            <a href="./index.html"> TRANG CHỦ </a>
+            <a href="./dang-ky.html"> ĐĂNG KÝ </a>
+            <a href="./nap-tien.html"> NẠP TIỀN </a>
+            <a href="./rut-tien.html"> RÚT TIỀN </a>
+            <a href="./khuyen-mai.html"> KHUYẾN MÃI </a>
+            <a href="./thu-thuat-ca-cuoc.html"> THỦ THUẬT CÁ CƯỢC </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Header -->
+      <div>
+        <!-- header -->
+        <div class="w-full bg-[#161616] lg:block hidden">
+          <div class="flex justify-between items-center px-[20px] py-3">
+            <div>
+              <img class="h-[100px]" src="./Images/logo-d9bet-biz.png" alt="" />
+            </div>
+            <div class="flex items-center space-x-3 text-white">
+              <a href="https://www.hay88.one/?inviteCode=1751262">
+                <button
+                  class="bg-[#009FE3] hover:bg-[#007FB6] transition-all duration-200 font-bold py-[10px] px-6 rounded-full"
+                >
+                  ĐĂNG NHẬP
+                </button>
+              </a>
+              <a href="https://www.hay88.one/?inviteCode=1751262">
+                <button
+                  class="bg-[#FF5200] hover:bg-[#CC4200] transition-all duration-200 font-bold py-[10px] px-10 rounded-full"
+                >
+                  ĐĂNG KÝ
+                </button>
+              </a>
+            </div>
+          </div>
+          <div
+            class="flex items-center font-semibold text-white *:px-6 *:py-5 border-t border-[#FF5200]"
+          >
+            <a
+              class="transition-all duration-300 hover:bg-[#FF5200]"
+              href="./index.html"
+              >TRANG CHỦ</a
+            >
+            <a
+              class="transition-all duration-300 hover:bg-[#FF5200]"
+              href="./dang-ky.html"
+              >ĐĂNG KÝ</a
+            >
+            <a
+              class="transition-all duration-300 hover:bg-[#FF5200]"
+              href="./nap-tien.html"
+              >NẠP TIỀN</a
+            >
+            <a
+              class="transition-all duration-300 hover:bg-[#FF5200]"
+              href="./rut-tien.html"
+              >RÚT TIỀN</a
+            >
+            <a
+              class="transition-all duration-300 hover:bg-[#FF5200]"
+              href="./khuyen-mai.html"
+              >KHUYẾN MÃI</a
+            >
+            <a class="bg-[#FF5200]" href="./thu-thuat-ca-cuoc.html"
+              >THỦ THUẬT CÁ CƯỢC</a
+            >
+          </div>
+        </div>
+
+        <!-- sm header -->
+        <div class="w-full bg-[#161616] lg:hidden block">
+          <div class="flex justify-center items-center py-4">
+            <img src="./Images/logo-d9bet-biz.png" alt="" />
+          </div>
+          <div class="py-4 border-t border-[#FF5200]">
+            <div class="justify-between flex items-center px-2 md:px-5">
+              <div onclick="showSideNav()" class="text-3xl text-white">
+                <ion-icon name="menu-outline"></ion-icon>
+              </div>
+              <div class="flex items-center md:space-x-3 space-x-2 text-white">
+                <a href="https://www.hay88.one/?inviteCode=1751262">
+                  <button
+                    class="bg-[#009FE3] hover:bg-[#007FB6] transition-all duration-200 font-bold text-xs md:text-base pb-[6px] pt-[8px] px-4 md:px-6 rounded-full"
+                  >
+                    ĐĂNG NHẬP
+                  </button>
+                </a>
+                <a href="https://www.hay88.one/?inviteCode=1751262">
+                  <button
+                    class="bg-[#FF5200] hover:bg-[#CC4200] transition-all duration-200 font-bold text-xs md:text-base pb-[6px] pt-[8px] px-6 md:px-10 rounded-full"
+                  >
+                    ĐĂNG KÝ
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- container -->
+      <div
+        class="w-full lg:flex space-y-8 lg:space-y-0 lg:space-x-3 xl:space-x-8 py-8"
+      >
+        <div class="w-full lg:w-[68%] space-y-8">
+          <div class="space-y-8">
+            <div>
+              <p class="text-lg">
+                <span class="text-blue-400"
+                  ><a href="./index.html">Trang chủ</a></span
+                >
+                \
+                <span class="text-blue-400"
+                  ><a href="./thu-thuat-ca-cuoc.html"
+                    >Thủ Thuật Cá Cược</a
+                  ></span
+                >
+                \ Bật mí các cách chia bài ba cây điểm cao dành cho người chơi
+                mới
+              </p>
+            </div>
+          </div>
+          <div class="w-full space-y-8 border border-gray-100 pb-10">
+            <!-- 1 -->
+            <div class="space-y-6">
+              <div class="">
+                <img
+                  class="w-full"
+                  src="/Images/cach-chia-bai-ba/1.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="space-y-6 px-4 pb-10">
+                <div class="space-y-4">
+                  <h1 class="text-3xl font-bold">
+                    Bật mí các cách chia bài ba cây điểm cao dành cho người chơi
+                    mới
+                  </h1>
+                  <p class="text-sm space-x-1 text-gray-400 font-semibold">
+                    <span><ion-icon name="pencil-outline"> </ion-icon></span>
+                    <span> VN365s XYZ </span>
+                    <span><ion-icon name="time-outline"></ion-icon></span>
+                    <span> 17 THÁNG SÁU 2022 </span>
+                    <span>
+                      <ion-icon name="folder-open-outline"> </ion-icon></span
+                    ><span> THỦ THUẬT CÁ CƯỢC</span>
+                  </p>
+                </div>
+
+                <p>
+                  Bài ba cây vốn là tựa game cá cược hấp dẫn và được ưa chuộng
+                  tại các sòng Casino trực tuyến. Tại đây thường tập hợp rất
+                  nhiều cao thủ, bởi phần thưởng khi chiến thắng ba cây rất
+                  “khủng”. Vậy làm thế nào để biết
+                  <span class=" font-bold text-blue-400">cách chia bài ba cây điểm cao</span>? Hãy cùng <span class="font-bold text-blue-400"> VN365s </span> tìm
+                  hiểu qua bài viết bên dưới.
+                </p>
+              </div>
+            </div>
+
+            <!-- 2 -->
+            <div class="space-y-8 px-4">
+              <div class="space-y-5">
+                <h1 class="font-bold text-2xl">Tổng quan về bài ba cây</h1>
+                <!-- img2 -->
+                <div
+                  class="flex flex-col justify-center items-center p-1 md:p-2 lg:p-3 w-full lg:w-11/12 mx-auto border"
+                >
+                  <div class="w-full">
+                    <img
+                      class="w-full"
+                      src="./Images/cach-chia-bai-ba/2.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <p class="w-full text-center pt-2">
+                    Cách chia bài ba cây điểm cao
+                  </p>
+                </div>
+                <p>
+                  Trước khi biết <span class=" font-bold"> cách chia bài ba cây điểm cao </span>, thì bạn cần phải
+                  tìm hiểu sơ lược về tựa game này. Theo đó Ba cây còn được biết
+                  đến là Ba cào tại Việt Nam. Khi tham gia ván đấu, mỗi người
+                  chơi sẽ được Dealer phát 3 lá bài ngẫu nhiên. Sau đó nhà cái
+                  sẽ tính tổng điểm của 3 lá bài để phân định thắng thua.
+                </p>
+              </div>
+              <p>
+                Nếu Dealer có tổng điểm cao hơn thì sẽ ăn tiền cược từ những
+                người chơi khác. Ngược lại nếu người có tổng điểm cao hơn Dealer
+                thì người chơi sẽ nhận được tiền thưởng. Thực tế số lượng người
+                chơi tham gia bài ba cây là không giới hạn. Chính vì thế nếu
+                phòng đấu càng có nhiều người chơi thì người Dealer sẽ càng có
+                cơ hội ăn được nhiều tiền thưởng, nếu tổng điểm cao.
+              </p>
+
+              <div class="space-y-5">
+                <h1 class="font-bold text-2xl">
+                  Những cách chia bài ba cây điểm cao
+                </h1>
+                <p>
+                  Mặc dù bài ba cây chủ yếu phụ thuộc vào độ may mắn của người
+                  chơi, nhưng nếu bạn biết vận dụng một vài mẹo và chiến thuật
+                  hợp lý thì tỷ lệ thắng sẽ cao hơn. Vậy nên dưới đây sẽ là
+                  những <span class=" font-bold"> cách chia bài ba cây điểm cao </span> mà không phải người chơi
+                  nào cũng biết.
+                </p>
+              </div>
+
+              <div class="space-y-5">
+                <h1 class="font-bold text-xl">Cô bài ba cây</h1>
+                <p>
+                  Hầu như, những cao thủ đều có chiến thuật và bí kíp đánh bài
+                  riêng biệt. Trong đó cô bài chính là kỹ xảo được ưa chuộng và
+                  có thể dễ dàng áp dụng mà không bị phát hiện. Cô bài thực ra
+                  là một kỹ xảo xào bài để mình sở hữu được 3 lá mạnh.
+                </p>
+              </div>
+
+              <p>
+                Theo đó để để áp dụng cô bài hiệu quả, thì đòi hỏi Dealer phải
+                thực sự nhanh, lẹ mắt và một chút “gian xảo”. Ưu tiên sắp xếp
+                những lá bài mạnh vào một vị trí, sau đó xào bài để không làm
+                đảo loạn vị trí của những lá mạnh. Nếu cô bài thành công, thì
+                Dealer chắc chắn sẽ nhận được những lá bài có giá trị cao và dễ
+                dàng giành chiến thắng.
+              </p>
+
+              <p>
+                Vậy cách để cô bài thuần thục chính là tham gia nhiều ván đấu và
+                rèn luyện kỹ năng xào bài. Bên cạnh đó, bạn cũng có thể học hỏi
+                thêm kinh nghiệm từ những cao thủ hoặc người chơi lâu năm tại
+                diễn đàn nhà cái Vn365s.
+              </p>
+
+              <div class="flex items-center space-x-5 text-lg">
+                <p class="h-10 border-2 border-gray-300"></p>
+                <p>
+                  <span class="font-bold"> =>> Xem thêm:</span>
+                  <span
+                    class="font-bold text-blue-400 cursor-pointer hover:text-blue-500 transition-all duration-200"
+                  >
+                    Tổng hợp các mẹo bắn cá ăn xu cực đỉnh trong năm 2022</span
+                  >
+                </p>
+              </div>
+
+              <div class="space-y-5">
+                <h1 class="font-bold text-xl">Tráo bài tinh vi</h1>
+                <p>
+                  Đây là kỹ thuật đòi hỏi trình độ cao hơn, đồng thời phải thực
+                  sự nhanh tay thì mới có thể thành công. Theo đó bạn sẽ không
+                  cần phải cô bài, mà đợi đến khi nhận được bài bạn mới bắt đầu
+                  sử dụng tiểu xảo. Ngay khi nhận thấy bài mình nhận được có
+                  tổng điểm thấp, thì bạn cần lập tức đổi thành quân bài khác để
+                  nâng cao tổng điểm.
+                </p>
+              </div>
+
+              <p>
+                Tuy nhiên kỹ năng này lại khá nguy hiểm, vì nếu bạn tráo bằng
+                quân bài trùng với bài của người chơi khác thì chắc chắn sẽ bị
+                phát hiện. Với độ rủi ro cao như thế, không quá khó hiểu khi chỉ
+                có cao thủ mới dám áp dụng kỹ năng tráo bài.
+              </p>
+            </div>
+
+            <!-- 3 -->
+            <div class="space-y-8 px-4">
+              <div class="space-y-5">
+                <h1 class="font-bold text-xl">Chia 4 quân bài</h1>
+                <!-- img3 -->
+                <div
+                  class="flex flex-col justify-center items-center p-1 md:p-2 lg:p-3 w-full lg:w-11/12 mx-auto border"
+                >
+                  <div class="w-full">
+                    <img
+                      class="w-full"
+                      src="./Images/cach-chia-bai-ba/3.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <p class="w-full text-center pt-2">
+                    Chia ngẫu nhiên 4 lá bài
+                  </p>
+                </div>
+                <p>
+                  Theo như luật chơi thì mỗi người chỉ được nhận 3 quân bài rồi
+                  sau đó với cộng tổng điểm 3 lá bại lại. Tuy nhiên khi bạn đã
+                  trở nên lão luyện thì có thể “lách luật” để tạo lợi thế. Khi
+                  bạn đang trong vai trò Dealer, bạn hãy chia bài thật nhanh tay
+                  để đối thủ không kịp quan sát. Sau đó bạn hãy lén chia cho
+                  mình 4 lá bài.
+                </p>
+              </div>
+              <p>
+                Theo như luật chơi thì mỗi người chỉ được nhận 3 quân bài rồi
+                sau đó với cộng tổng điểm 3 lá bại lại. Tuy nhiên khi bạn đã trở
+                nên lão luyện thì có thể “lách luật” để tạo lợi thế. Khi bạn
+                đang trong vai trò Dealer, bạn hãy chia bài thật nhanh tay để
+                đối thủ không kịp quan sát. Sau đó bạn hãy lén chia cho mình 4
+                lá bài.
+              </p>
+
+              <div class="space-y-5">
+                <h1 class="font-bold text-xl">
+                  Những công cụ giúp chia bài ba cây đạt điểm cao
+                </h1>
+                <p>
+                  Bên cạnh những kỹ thuật đánh bài trên, thì bạn còn có thể sử
+                  dụng một vài công cụ hỗ trợ để giúp bạn nhận được những quân
+                  bài mạnh.
+                </p>
+              </div>
+
+              <div class="space-y-5">
+                <ul class="space-y-1 pl-6 list-disc">
+                  <li>
+                    Kính áp tròng: Loại kính đặc biệt có thể áp vào mắt của
+                    người dùng. Từ đó bạn sẽ dễ dàng nhìn thấy rõ những quân
+                    bài. Ngoài ra bạn có thể làm ký hiệu nhỏ trên các lá bài mà
+                    mắt thường không thể nhận thấy. Nhờ vậy bạn sẽ dễ dàng làm
+                    chủ cuộc chơi khi biết được đối thủ đang có những quân bài
+                    nào.
+                  </li>
+                  <li>
+                    Bộ bài mẫu tử: Là một công cụ hữu ích được thiết kế để người
+                    sở hữu dễ dàng chia được bài mạnh cho mình. Theo đó bạn có
+                    thể tham khảo sử dụng bài mẫu tử trên các diễn đàn cá cược.
+                  </li>
+                </ul>
+
+                <h1 class="font-bold text-2xl">
+                  Các bước vận dụng cách chia bài ba cây điểm cao
+                </h1>
+
+                <p>
+                  Sau khi đã đã biết được những <span class=" font-bold"> cách chia bài ba cây điểm cao </span> ở
+                  trên, thì bạn đã có thể áp dụng thực chiến. Tuy nhiên nếu bạn
+                  vẫn chưa biết vận dụng những kỹ năng trên như thế nào, thì hãy
+                  theo dõi các bước sau đây:
+                </p>
+              </div>
+
+              <div class="space-y-5">
+                <h1 class="font-bold text-xl">Bước 1: Chọn quân bài tốt</h1>
+                <p>
+                  Để có thể chọn được 3 cây bài mạnh, thì bắt buộc bạn phải là
+                  người thắng ở ván trước. Lúc này bạn sẽ trong vai trò Dealer
+                  và có nhiệm vụ chia bài. Trước khi tiến hành xào bài thì bạn
+                  cần quan sát và tách những lá bài mạnh thành liêng. Sau đó mới
+                  sắp ở vị trí phf hợp để khi chia bài thì những lá đó thuộc về
+                  bạn.
+                </p>
+              </div>
+            </div>
+
+            <!-- 4 -->
+            <div class="space-y-8 px-4">
+              <div class="space-y-5">
+                <h1 class="font-bold text-xl">Bước 2: Xào bài</h1>
+                <!-- img4 -->
+                <div
+                  class="flex flex-col justify-center items-center p-1 md:p-2 lg:p-3 w-full lg:w-11/12 mx-auto border"
+                >
+                  <div class="w-full">
+                    <img
+                      class="w-full"
+                      src="./Images/cach-chia-bai-ba/4.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <p class="w-full text-center pt-2">Kỹ thuật xào bài</p>
+                </div>
+                <p>
+                  Tùy vào mỗi ván đầu mà sẽ có cách xào bài khác nhau. Điều này
+                  còn phụ thuộc số lượng người chơi tham gia trong ván đấu. Giả
+                  dụ, số lượng người chơi chính là n, thì cây bài đầu tiên ở vị
+                  trí n. Cây thứ 2 ở vị trí 2n và tiếp tục là cây thứ 3 nằm vị
+                  trí 3n.
+                </p>
+              </div>
+
+              <div class="space-y-5">
+                <ul class="space-y-1 list-disc pl-6">
+                  <li>
+                    Đầu tiên bạn cần phải thật sự khéo léo và giữ chặt một quân
+                    bài ở vị trí cuối trong lòng bàn tay. Bởi vì quân bài này ở
+                    vị trí cuối cùng, đồng thời là cây bài n nên bạn chắc chắn
+                    sẽ nhận được lá bài này.
+                  </li>
+                  <li>
+                    Tiếp theo bạn hãy cắt n-1 cây bài nằm ở trên cùng, bên cạnh
+                    đó xếp bài vào những vị trí kế tiếp ở trên cây bài ở trong
+                    bàn tay ngay từ đầu.
+                  </li>
+                  <li>
+                    Cuối cùng giữ chặt quân bài thứ 2 nằm ở phí trên n cây mới
+                    vừa được chọn để thay thế thành vị trí 2n. Sau đó tiến hành
+                    thao tác tương tự như trên bạn sẽ có được vị trí của quân
+                    bài thứ 3 nằm ở vị trí 3n.
+                  </li>
+                </ul>
+
+                <p>
+                  Như vậy nếu bạn thực hiện tuần tự theo các thao tác trên, thì
+                  bạn chắc chắn sẽ nhận được 3 quân bài mong muốn.
+                </p>
+              </div>
+
+              <div class="space-y-5">
+                <h1 class="font-bold text-xl">Bước 3: Tiến hành cắt bài</h1>
+                <p>
+                  Người chơi sẽ phải chia đội bộ bài ra thành 2 phần, đồng thời
+                  một người chơi bất kỳ trong bàn sẽ chọn bỏ đi 1 trong 2 phần.
+                  Nhiệm vụ của Dealer là chia đều phần còn lại. Thông thường nếu
+                  bạn muốn người chơi khác bỏ đi phần mà bạn muốn, thì bạn cần
+                  đặt phần đó ở phía trên.
+                </p>
+              </div>
+
+              <p>
+                Tuy nhiên bạn cũng phải xem xét nếu phòng chơi chỉ có từ 3 – 4
+                người thì cần phải cẩn thận. Bởi vì họ có thể dễ dàng nhận ra
+                mánh khóe của bạn. Còn trong tình huống ván đầu có nhiều người
+                chơi, thì bạn nên cắt thêm 1 vài quân bài xuống vị trí cuối cùng
+                của bộ bài. Nhờ đó đối thủ sẽ không nghi ngờ bạn đang giữ vị trí
+                cho những lá bài của bạn.
+              </p>
+
+              <div class="space-y-5">
+                <div class="flex items-center space-x-5 text-lg">
+                  <p class="h-10 border-2 border-gray-300"></p>
+                  <p>
+                    <span class="font-bold"> =>> Xem thêm:</span>
+                    <span
+                      class="font-bold text-blue-400 cursor-pointer hover:text-blue-500 transition-all duration-200"
+                    >
+                      Kinh nghiệm chơi sicbo luôn thắng, ăn lãi 100% từ các tay
+                      chơi cao thủ</span
+                    >
+                  </p>
+                </div>
+
+                <p>
+                  Ngay khi người chơi khác đã cắt bài thì bạn chỉ việc chia bài
+                  như bình thường. Chắc chắn những quân bài mà bạn chọn sẽ nằm
+                  trong tay bạn với điểm số cao.
+                </p>
+              </div>
+              <p>
+                Bài viết trên đã đem đến những thông tin quan trọng. Qua đó anh
+                em game thủ đã biết thêm những <span class=" font-bold"> cách chia bài ba cây điểm cao</span>.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-full lg:w-[32%] space-y-5">
+          <div class="flex items-center w-full">
+            <div class="w-[40%] border-2 border-red-600"></div>
+            <div class="w-[60%] border-2 border-gray-200"></div>
+          </div>
+
+          <div>
+            <a
+              class="flex space-x-3 pr-1"
+              href="./cach-chia-bai-ba-cay-diem-cao.html"
+            >
+              <div class="w-[20%] md:w-[10%] lg:w-[20%] xl:w-[20%]">
+                <img
+                  class="w-full"
+                  src="./Images/iconCards/iconcard1.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="w-[80%] md:w-[70%] lg:w-[80%] xl:w-[80%] space-y-1">
+                <h1
+                  class="text-sm md:text-base lg:text-sm xl:text-base font-bold"
+                >
+                  Bật mí các cách chia bài ba cây điểm cao dành cho người chơi
+                  mới
+                </h1>
+                <div class="text-xs md:text-sm lg:text-xs xl:text-sm">
+                  <span> <ion-icon name="time-outline"></ion-icon> </span>
+                  <span> 10:14:SÁNG </span>
+                  <span class="pl-1">
+                    <ion-icon name="calendar-outline"></ion-icon>
+                  </span>
+                  <span> 17 THÁNG SÁU 2022 </span>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div>
+            <a
+              class="flex space-x-3 pr-1"
+              href="./cach-danh-dau-duoi-mien-bac.html"
+            >
+              <div class="w-[20%] md:w-[10%] lg:w-[20%] xl:w-[20%]">
+                <img
+                  class="w-full"
+                  src="./Images/iconCards/iconcard2.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="w-[80%] md:w-[70%] lg:w-[80%] xl:w-[80%] space-y-1">
+                <h1
+                  class="text-sm md:text-base lg:text-sm xl:text-base font-bold"
+                >
+                  Đầu đuôi miền Bắc là gì và có những cách đánh đầu đuôi miền
+                  Bắc nào?
+                </h1>
+                <div class="text-xs md:text-sm lg:text-xs xl:text-sm">
+                  <span> <ion-icon name="time-outline"></ion-icon> </span>
+                  <span> 10:43:CHIỀU </span>
+                  <span class="pl-1">
+                    <ion-icon name="calendar-outline"></ion-icon>
+                  </span>
+                  <span> 15 THÁNG SÁU 2022 </span>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div>
+            <a
+              class="flex space-x-3 pr-1"
+              href="./nhung-luu-y-khi-choi-bai-mau-binh-can-ghi-nho.html"
+            >
+              <div class="w-[20%] md:w-[10%] lg:w-[20%] xl:w-[20%]">
+                <img
+                  class="w-full"
+                  src="./Images/iconCards/iconcard3.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="space-y-1 w-[80%] md:w-[70%] lg:w-[80%] xl:w-[80%]">
+                <h1
+                  class="text-sm md:text-base lg:text-sm xl:text-base font-bold"
+                >
+                  Những lưu ý khi chơi bài mậu binh cần ghi nhớ
+                </h1>
+                <div class="text-xs md:text-sm lg:text-xs xl:text-sm">
+                  <span> <ion-icon name="time-outline"></ion-icon> </span>
+                  <span> 10:38:CHIỀU </span>
+                  <span class="pl-1">
+                    <ion-icon name="calendar-outline"></ion-icon>
+                  </span>
+                  <span> 15 THÁNG SÁU 2022 </span>
+                </div>
+              </div></a
+            >
+          </div>
+
+          <div>
+            <a
+              class="flex space-x-3 pr-1"
+              href="./cach-bat-keo-trong-bong-da.html"
+            >
+              <div class="w-[20%] md:w-[10%] lg:w-[20%] xl:w-[20%]">
+                <img
+                  class="w-full"
+                  src="./Images/iconCards/iconcard4.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="space-y-1 w-[80%] md:w-[70%] lg:w-[80%] xl:w-[80%]">
+                <h1
+                  class="text-sm md:text-base lg:text-sm xl:text-base font-bold"
+                >
+                  Cách bắt kèo trong bóng đá tại nhà cái uy tín Vn365s
+                </h1>
+                <div class="text-xs md:text-sm lg:text-xs xl:text-sm">
+                  <span> <ion-icon name="time-outline"></ion-icon> </span>
+                  <span> 10:33:CHIỀU </span>
+                  <span class="pl-1">
+                    <ion-icon name="calendar-outline"></ion-icon>
+                  </span>
+                  <span> 15 THÁNG SÁU 2022 </span>
+                </div>
+              </div>
+            </a>
+          </div>
+
+  
+        </div>
+      </div>
+
+      <!-- footer -->
+      <div
+        class="grid md:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-8 lg:gap-10 bg-[#191919] px-6 py-20 font-semibold"
+      >
+        <div class="flex justify-center items-center lg:items-start">
+          <img
+            class="h-[70px] lg:h-14 xl:h-20"
+            src="./Images/logo-d9bet-biz.png"
+            alt=""
+          />
+        </div>
+        <div class="lg:space-y-5 space-y-3">
+          <div class="border-b border-gray-200 text-white pb-2">
+            <h1 class="font-bold text-lg lg:text-xl 2xl:text-2xl">CÁ CƯỢC</h1>
+          </div>
+          <div
+            class="lg:text-base text-sm text-gray-400 space-y-1 lg:space-y-2 xl:space-y-3"
+          >
+            <p>Thể Thao</p>
+            <p>Đá Gà</p>
+            <p>Casino Trực Tuyến</p>
+          </div>
+        </div>
+        <div class="lg:space-y-5 space-y-3">
+          <div class="border-b border-gray-200 text-white pb-2">
+            <h1 class="font-bold text-lg lg:text-xl 2xl:text-2xl">HƯỚNG DẪN</h1>
+          </div>
+          <div
+            class="lg:text-base text-sm text-gray-400 space-y-1 lg:space-y-2 xl:space-y-3"
+          >
+            <p class="hover:text-white transition-all duration-100">
+              <a href="./dang-ky.html">Đăng Ký VN365s</a>
+            </p>
+            <p class="hover:text-white transition-all duration-100">
+              <a href="./nap-tien.html">Nạp Tiền VN365s</a>
+            </p>
+            <p class="hover:text-white transition-all duration-100">
+              <a href="./rut-tien.html">Rút Tiền VN365s</a>
+            </p>
+            <p class="hover:text-white transition-all duration-100">
+              <a href="./khuyen-mai.html">Khuyến Mãi VN365s</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="space-y-3 xl:space-y-5 text-white">
+          <div class="border-b border-gray-200 text-white pb-2">
+            <h1 class="font-bold text-lg lg:text-xl 2xl:text-2xl">LIÊN HỆ</h1>
+          </div>
+          <p class="lg:text-base text-sm">
+            32t8 Âu Dương Lân, Phường 3, Quận 8, Thành phố Hồ Chí Minh
+          </p>
+          <p class="lg:text-base text-sm">0969581241</p>
+
+          <p>https://vn365s.xyz/</p>
+        </div>
+      </div>
+      <div
+        class="bg-[#0D0F26] px-6 py-8 space-y-2 md:space-y-0 md:flex justify-between items-center text-gray-200"
+      >
+        <p class="lg:text-base text-sm text-center">© Copyright by vn365s.xyz</p>
+        <div class="flex justify-center items-center">
+          <div class="flex items-center space-x-2 md:space-x-4">
+            <p class="lg:text-base text-xs md:text-sm">
+              Giới Thiệu | Chính Sách Bảo Mật | Liên Hệ
+            </p>
+            <ion-icon
+              name="chevron-up-outline"
+              class="text-2xl lg:text-3xl"
+            ></ion-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

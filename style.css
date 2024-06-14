@@ -1,0 +1,8 @@
+*{
+    font-family: sans-serif;
+}
+
+.hideandshow{
+    transition: all 1s ease;
+    left: -100%;
+}
